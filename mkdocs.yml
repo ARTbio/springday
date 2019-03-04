@@ -1,4 +1,15 @@
 site_name: Galaxy Spring day 2019
 nav:
- - Home: index.md
+  - Home: index.md
+  - Pretreatments:
+    - Data upload: uploads.md
+    - Quality control: QC.md
+  - Mapping:
+    - Mapping: mapping.md
+    - Inspection of the mapping results: visualisation.md
+  - Analysis of the differential gene expression:
+    - Count the number of reads per annotated gene: count.md
+    - Identification of the differentially expressed features: DE.md
+    - Visualization of the differentially expressed genes: DEvisu.md
+    - Analysis of functional enrichment among the differentially expressed genes: GO.md
 theme: readthedocs
