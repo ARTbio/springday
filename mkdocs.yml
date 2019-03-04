@@ -1,15 +1,4 @@
-site_name: Mouse Genetics
+site_name: Galaxy Spring day 2019
 pages:
  - Home: index.md
- - Sequencing Protocol: seq.md
- - Lumpy approach: lumpy_approach.md
- - Trainee connection: connection.md
- - Import datasets: import.md
- - BWA mem tool: BWA.md
- - lumpy analysis: lumpy.md
- - Filter VCF file for visualization: filter_vcf.md
- - Compute genome coverage: coverage.md
- - Generate workflow from history: workflow.md
- - Run the workflow: run_workflow.md
- - Visualisation in UCSC Genome Browser: visualisation.md
 theme: readthedocs
