@@ -1,4 +1,4 @@
 site_name: Galaxy Spring day 2019
-pages:
+nav:
  - Home: index.md
 theme: readthedocs
