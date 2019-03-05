@@ -23,13 +23,13 @@ table will be (very) useful in our analysis since each of the 7 datasets are des
 with (i) its original ID in GEO (or EBI SRA) (ii)  its condition (untreated or treated)
 and (iii) the sequencing technology used (single read or paired-end).
 
-GSM461176_untreat_single <-> SRR031709_untreat_single
-GSM461177_untreat_paired <-> SRR031714_untreat_paired
-GSM461178_untreat_paired <-> SRR031716_untreat_paired
-GSM461179_treat_single <-> SRR031718_treat_single
-GSM461180_treat_paired <-> SRR031724_treat_paired
-GSM461181_treat_paired <-> SRR031726_treat_paired
-GSM461182_untreat_single <-> SRR031728_untreat_single
+- GSM461176_untreat_single <-> SRR031709_untreat_single
+- GSM461177_untreat_paired <-> SRR031714_untreat_paired
+- GSM461178_untreat_paired <-> SRR031716_untreat_paired
+- GSM461179_treat_single <-> SRR031718_treat_single
+- GSM461180_treat_paired <-> SRR031724_treat_paired
+- GSM461181_treat_paired <-> SRR031726_treat_paired
+- GSM461182_untreat_single <-> SRR031728_untreat_single
 
 ## Data upload
 
