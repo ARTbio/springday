@@ -197,6 +197,38 @@ computer.</li>
 Galaxy interface that pops up if you click the upload icone (put image).</li>
 </ol>
 <h3 id="importing-data-via-links">Importing data via links</h3>
+<p>The sample <code>GSM461177/SRR031714</code> was sequenced using paired-end sequencing. Thus, there are 2 files for forward
+and reverse reading of DNA fragment ends, respectively.</p>
+<ul>
+<li>GSM461177_1/SRR031714_1 (forward reads) can be downloaded from the link
+<code>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_1.fastq.gz</code></li>
+<li>GSM461177_2/SRR031714_2 (reverse reads) can be downloaded from the link
+<code>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_2.fastq.gz</code></li>
+</ul>
+<p>However, do not download these files on your local machine.</p>
+<p>Instead, copy the links</p>
+<pre><code>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_2.fastq.gz
+</code></pre>
+<p>and paste them in the <code>Paste/Fetch data</code> tab of the Galaxy upload interface.</p>
+<p>In addition, select <code>fastqsanger.gz</code> in the <code>Type</code> menu.</p>
+<p>Press the start button.</p>
+<h3 id="importing-data-via-the-ebi-sra-ena-sra">Importing data via the <code>EBI SRA ENA SRA</code></h3>
+<p>The sample <code>GSM461178/SRR031716</code> is also a paired-end sequencing.</p>
+<p>This time, we are going to download the two corresponding fastq.gz files directly from
+the EBI SRA using the tool <code>EBI SRA ENA SRA</code> in the <code>Get data</code> tool submenu.</p>
+<ol>
+<li>Click on this tool (you can select it rapidly using the search bar)</li>
+<li>In the search box of the EBI SRA website, enter <code>SRR031716</code></li>
+<li>Two categories of results are retrieved, Experiment and Run.
+What we want to get are the files from the sequencing runs. Thus, click the
+SRR031716 link in the Run section (1 results found).</li>
+<li>Click on "File 1" in the <code>FASTQ files (Galaxy)</code> Column.
+You will be switched back to the Galaxy interface, and the download of the
+SRR031716_1.fastq.gz file will start immediately as a yellow dataset in the history right panel.</li>
+</ol>
+<p>Without waiting for the complete download of SRR031716_1.fastq.gz, you can repeat
+the previous steps 1, 2, 3 and 4. Just Click on <code>File 2</code> instead of <code>File 1</code> in step 4</p>
               
             </div>
           </div>
