@@ -88,3 +88,25 @@ the EBI SRA using the tool `EBI SRA ENA SRA` in the `Get data` tool submenu.
     
     Without waiting for the complete download of SRR031716_1.fastq.gz, you can repeat
     the previous steps 1, 2, 3 and 4. Just Click on `File 2` instead of `File 1` in step 4
+    
+### Importing data from data libraries
+
+For collaborative work, Galaxy offers data libraries, where datasets can be stored and
+available to one or multiple users.
+
+This is what we are going to use to import rapidly all the input data you need for this RNAseq
+analysis.
+
+All datasets have been preloaded in the data library named `RNAseq`.
+
+To access this library and import its content in your histories:
+
+1. Click the menu `Données partagées` (`Shared data`) and select the submenu
+`Bibliothèque de Données` (`Data libraries`).
+2. Navigate to the data library `RNAseq`
+3. Select all datasets
+4. Click the `To History` button and select `as Datasets`
+5. In the pop up window, `or create new` and type `Input data` to transfer the datasets
+in a new history with this name.
+6. Click on the green box to navigate to this new history (or click on the main menu `analyse data`)
+and start using these datasets.
