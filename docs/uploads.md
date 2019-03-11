@@ -77,14 +77,14 @@ The sample `GSM461178/SRR031716` is also a paired-end sequencing.
 This time, we are going to download the two corresponding fastq.gz files directly from
 the EBI SRA using the tool `EBI SRA ENA SRA` in the `Get data` tool submenu.
 
-1. Click on this tool (you can select it rapidly using the search bar)
-2. In the search box of the EBI SRA website, enter `SRR031716`
-3. Two categories of results are retrieved, Experiment and Run.
-What we want to get are the files from the sequencing runs. Thus, click the
-SRR031716 link in the Run section (1 results found).
-4. Click on "File 1" in the `FASTQ files (Galaxy)` Column.
-You will be switched back to the Galaxy interface, and the download of the
-SRR031716_1.fastq.gz file will start immediately as a yellow dataset in the history right panel.
-
-Without waiting for the complete download of SRR031716_1.fastq.gz, you can repeat
-the previous steps 1, 2, 3 and 4. Just Click on `File 2` instead of `File 1` in step 4
+    1. Click on this tool (you can select it rapidly using the search bar)
+    2. In the search box of the EBI SRA website, enter `SRR031716`
+    3. Two categories of results are retrieved, Experiment and Run.
+    What we want to get are the files from the sequencing runs. Thus, click the
+    SRR031716 link in the Run section (1 results found).
+    4. Click on "File 1" in the `FASTQ files (Galaxy)` Column.
+    You will be switched back to the Galaxy interface, and the download of the
+    SRR031716_1.fastq.gz file will start immediately as a yellow dataset in the history right panel.
+    
+    Without waiting for the complete download of SRR031716_1.fastq.gz, you can repeat
+    the previous steps 1, 2, 3 and 4. Just Click on `File 2` instead of `File 1` in step 4
