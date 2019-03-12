@@ -102,13 +102,16 @@
   All datasets have been preloaded in the data library named `RNAseq`.
   
   To access this library and import its content in your histories:
+
+.. note::
+    this is technically a note
   
-  1. Click the menu `Données partagées` (`Shared data`) and select the submenu
-  `Bibliothèque de Données` (`Data libraries`).
-  2. Navigate to the data library `RNAseq`
-  3. Select all datasets
-  4. Click the `To History` button and select `as Datasets`
-  5. In the pop up window, `or create new` and type `Input data` to transfer the datasets
-  in a new history with this name.
-  6. Click on the green box to navigate to this new history (or click on the main menu `analyse data`)
-  and start using these datasets.
+ 1. Click the menu `Données partagées` (`Shared data`) and select the submenu
+ `Bibliothèque de Données` (`Data libraries`).
+ 2. Navigate to the data library `RNAseq`
+ 3. Select all datasets
+ 4. Click the `To History` button and select `as Datasets`
+ 5. In the pop up window, `or create new` and type `Input data` to transfer the datasets
+ in a new history with this name.
+ 6. Click on the green box to navigate to this new history (or click on the main menu `analyse data`)
+ and start using these datasets.
