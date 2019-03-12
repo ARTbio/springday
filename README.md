@@ -36,9 +36,11 @@ Computer in the training room have ethernet connection. Your labtops can connect
 
 ### Live Chat
 A [Gitter chanel](https://gitter.im/ARTbio/springday)
+
 .. image:: https://img.shields.io/badge/chat-gitter-blue.svg
     :target: https://gitter.im/ARTbio/springday
     :alt: Chat on gitter
+
 will be available to exchange information and results and raise questions or issues during the training. Please, take a few seconds to make sure that you have an easy access to the Gitter [springday](https://gitter.im/ARTbio/springday).
 
 ### Training material
