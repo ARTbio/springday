@@ -62,6 +62,15 @@
     <a class="current" href="./">Data upload</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#data">Data</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#data-upload">Data upload</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
                 <li class="">
@@ -145,26 +154,26 @@
           <div role="main">
             <div class="section">
               
-                <p># Data</p>
+                <h1 id="data">Data</h1>
 <p>The original data is available at NCBI Gene Expression Omnibus (GEO)
-  under accession number <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18508">GSE18508</a>.
-  It is also mirrored at the EBI Small Read Archive under the accession number
-  <a href="https://www.ebi.ac.uk/ena/data/view/SRP001537">SRP001537</a></p>
+under accession number <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18508">GSE18508</a>.
+It is also mirrored at the EBI Small Read Archive under the accession number
+<a href="https://www.ebi.ac.uk/ena/data/view/SRP001537">SRP001537</a></p>
 <p>The data was generated through deep Sequencing of mRNA from the Drosophila melanogaster
-  S2-DRSC cells that have been RNAi depleted of mRNAs encoding RNA binding proteins.</p>
+S2-DRSC cells that have been RNAi depleted of mRNAs encoding RNA binding proteins.</p>
 <p>In the tutorial, we are going to focus on 7 datasets generated to study the effect of the
-  <em>Pasilla</em> gene inactivation by RNAi knock-down.</p>
+<em>Pasilla</em> gene inactivation by RNAi knock-down.</p>
 <ul>
 <li>4 untreated samples: GSM461176, GSM461177, GSM461178, GSM461182</li>
 <li>3 treated samples (Pasilla gene depleted by RNAi): GSM461179, GSM461180, GSM461181 </li>
 </ul>
 <p>Each sample constitutes a separate biological replicate of the corresponding condition
-  (treated or untreated).</p>
+(treated or untreated).</p>
 <p>Two of the treated and two of the untreated samples are from a paired-end sequencing assay,
-  while the remaining samples are from a single-end sequencing experiment. Thus the following
-  table will be (very) useful in our analysis since each of the 7 datasets are designated
-  with (i) its original ID in GEO (or EBI SRA) (ii)  its condition (untreated or treated)
-  and (iii) the sequencing technology used (single read or paired-end).</p>
+while the remaining samples are from a single-end sequencing experiment. Thus the following
+table will be (very) useful in our analysis since each of the 7 datasets are designated
+with (i) its original ID in GEO (or EBI SRA) (ii)  its condition (untreated or treated)
+and (iii) the sequencing technology used (single read or paired-end).</p>
 <ul>
 <li>GSM461176_untreat_single &lt;-&gt; SRR031709_untreat_single</li>
 <li>GSM461177_untreat_paired &lt;-&gt; SRR031714_untreat_paired</li>
@@ -174,62 +183,60 @@
 <li>GSM461181_treat_paired &lt;-&gt; SRR031726_treat_paired</li>
 <li>GSM461182_untreat_single &lt;-&gt; SRR031728_untreat_single</li>
 </ul>
-<p>## Data upload</p>
+<h2 id="data-upload">Data upload</h2>
 <p>We will take benefit of this mandatory stage, to review various possibilities to upload
-  dataset in Galaxy.</p>
+dataset in Galaxy.</p>
 <p>Then you will have the possibility to import the full set of the 7 FASTQ files in one of your
-  histories, from a data library that has been pre-set in your Galaxy server for this training
-  session.</p>
-<p>### Uploading data from your local computer</p>
+histories, from a data library that has been pre-set in your Galaxy server for this training
+session.</p>
+<h3 id="uploading-data-from-your-local-computer">Uploading data from your local computer</h3>
 <ol>
 <li>Download the sample <a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031709/SRR031709.fastq.gz">GSM461176/SRR031709</a> to your
-  computer.</li>
+computer.</li>
 <li>Upload this local file SRR031709.fastq.gz to your Galaxy history using the upload/Download
-  Galaxy interface that pops up if you click the upload icone (put image).</li>
+Galaxy interface that pops up if you click the upload icone (put image).</li>
 </ol>
-<p>### Importing data via links</p>
+<h3 id="importing-data-via-links">Importing data via links</h3>
 <p>The sample <code>GSM461177/SRR031714</code> was sequenced using paired-end sequencing. Thus, there are 2 files for forward
-  and reverse reading of DNA fragment ends, respectively.</p>
+and reverse reading of DNA fragment ends, respectively.</p>
 <ul>
 <li>GSM461177_1/SRR031714_1 (forward reads) can be downloaded from the link
-  <code>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_1.fastq.gz</code></li>
+<code>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_1.fastq.gz</code></li>
 <li>GSM461177_2/SRR031714_2 (reverse reads) can be downloaded from the link
-  <code>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_2.fastq.gz</code></li>
+<code>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_2.fastq.gz</code></li>
 </ul>
 <p>However, do not download these files on your local machine.</p>
 <p>Instead, copy the links</p>
-<pre><code>  ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_1.fastq.gz
-  ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_2.fastq.gz
+<pre><code>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_2.fastq.gz
 </code></pre>
 <p>and paste them in the <code>Paste/Fetch data</code> tab of the Galaxy upload interface.</p>
 <p>In addition, select <code>fastqsanger.gz</code> in the <code>Type</code> menu.</p>
 <p>Press the start button.</p>
-<p>### Importing data via the <code>EBI SRA ENA SRA</code></p>
+<h3 id="importing-data-via-the-ebi-sra-ena-sra">Importing data via the <code>EBI SRA ENA SRA</code></h3>
 <p>The sample <code>GSM461178/SRR031716</code> is also a paired-end sequencing.</p>
 <p>This time, we are going to download the two corresponding fastq.gz files directly from
-  the EBI SRA using the tool <code>EBI SRA ENA SRA</code> in the <code>Get data</code> tool submenu.</p>
+the EBI SRA using the tool <code>EBI SRA ENA SRA</code> in the <code>Get data</code> tool submenu.</p>
 <p><img alt="" src="../images/tool_small.png" /></p>
-<pre><code>  1. Click on the tool `EBI SRA ENA SRA` (you can select it rapidly using the search bar)
-  2. In the search box of the EBI SRA website, enter `SRR031716`
-  3. Two categories of results are retrieved, Experiment and Run.
-  What we want to get are the files from the sequencing runs. Thus, click the
-  SRR031716 link in the Run section (1 results found).
-  4. Click on "File 1" in the `FASTQ files (Galaxy)` Column.
-  You will be switched back to the Galaxy interface, and the download of the
-  SRR031716_1.fastq.gz file will start immediately as a yellow dataset in the history right panel.
+<pre><code>1. Click on the tool `EBI SRA ENA SRA` (you can select it rapidly using the search bar)
+2. In the search box of the EBI SRA website, enter `SRR031716`
+3. Two categories of results are retrieved, Experiment and Run.
+What we want to get are the files from the sequencing runs. Thus, click the
+SRR031716 link in the Run section (1 results found).
+4. Click on "File 1" in the `FASTQ files (Galaxy)` Column.
+You will be switched back to the Galaxy interface, and the download of the
+SRR031716_1.fastq.gz file will start immediately as a yellow dataset in the history right panel.
 
-  Without waiting for the complete download of SRR031716_1.fastq.gz, you can repeat
-  the previous steps 1, 2, 3 and 4. Just Click on `File 2` instead of `File 1` in step 4
+Without waiting for the complete download of SRR031716_1.fastq.gz, you can repeat
+the previous steps 1, 2, 3 and 4. Just Click on `File 2` instead of `File 1` in step 4
 </code></pre>
-<p>### Importing data from data libraries</p>
+<h3 id="importing-data-from-data-libraries">Importing data from data libraries</h3>
 <p>For collaborative work, Galaxy offers data libraries, where datasets can be stored and
-  available to one or multiple users.</p>
+available to one or multiple users.</p>
 <p>This is what we are going to use to import rapidly all the input data you need for this RNAseq
-  analysis.</p>
+analysis.</p>
 <p>All datasets have been preloaded in the data library named <code>RNAseq</code>.</p>
 <p>To access this library and import its content in your histories:</p>
-<p>.. note::
-    this is technically a note</p>
 <ol>
 <li>Click the menu <code>Données partagées</code> (<code>Shared data</code>) and select the submenu
  <code>Bibliothèque de Données</code> (<code>Data libraries</code>).</li>
