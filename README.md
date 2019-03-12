@@ -35,7 +35,11 @@ We have 25 slots with computers that can run either Ubuntu or Windows to your co
 Computer in the training room have ethernet connection. Your labtops can connect internet either using `eduoram` or a SU wifi whose credentials will be provided individually the day of the training.
 
 ### Live Chat
-A [Gitter chanel](https://gitter.im/ARTbio/springday) will be available to exchange information and results and raise questions or issues during the training. Please, take a few seconds to make sure that you have an easy access to the Gitter [springday](https://gitter.im/ARTbio/springday).
+A [Gitter chanel](https://gitter.im/ARTbio/springday)
+.. image:: https://img.shields.io/badge/chat-gitter-blue.svg
+    :target: https://gitter.im/ARTbio/springday
+    :alt: Chat on gitter
+will be available to exchange information and results and raise questions or issues during the training. Please, take a few seconds to make sure that you have an easy access to the Gitter [springday](https://gitter.im/ARTbio/springday).
 
 ### Training material
 All training material will be available in THIS repository, including slides, tutorial of the analysis, main results, etc...
