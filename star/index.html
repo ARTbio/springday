@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Mapping - Galaxy Spring day 2019</title>
+  <title>RNA STAR - Galaxy Spring day 2019</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Mapping";
-    var mkdocs_page_input_path = "mapping.md";
+    var mkdocs_page_name = "RNA STAR";
+    var mkdocs_page_input_path = "star.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -118,19 +118,19 @@
 		
     <span class="caption-text">Mapping</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../mapping/">Mapping</a>
+                </li>
                 <li class=" current">
                     
-    <a class="current" href="./">Mapping</a>
+    <a class="current" href="./">RNA STAR</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#mapping-the-reads-to-the-reference-genome">Mapping the reads to the reference genome</a></li>
+    <li class="toctree-l3"><a href="#rna-star-option-for-50-of-attendees">RNA STAR (option for 50 % of attendees)</a></li>
     
 
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../star/">RNA STAR</a>
                 </li>
                 <li class="">
                     
@@ -192,7 +192,7 @@
         
       
     
-    <li>Mapping</li>
+    <li>RNA STAR</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -202,9 +202,38 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="mapping-the-reads-to-the-reference-genome">Mapping the reads to the reference genome</h1>
-<p><img alt="" src="../images/lamp.png" /> </p>
-<p><img alt="" src="../images/splice_aware_alignment.png" /></p>
+                <p><img alt="" src="../images/galaxylogo.png" /></p>
+<h1 id="rna-star-option-for-50-of-attendees">RNA STAR (option for 50 % of attendees)</h1>
+<p>For information to set proper value for STAR parameters:</p>
+<p><img alt="" src="../images/multiqc_samples_length.png" /></p>
+<hr />
+<p><img alt="" src="../images/tool_small.png" /></p>
+<ol>
+<li>create a new history and name it <code>RNA STAR</code></li>
+<li>Import the 11 datasets from the RNAseq data library to this <code>RNA STAR</code> history, plus the Drosophila_melanogaster.BDGP6.95.gtf file</li>
+<li>Select the <code>RNA STAR</code> tool with the following parameters to map your reads on the reference genome:<ol>
+<li><code>Single-end or paired-end reads</code>: Single-end</li>
+<li><code>RNA-Seq FASTQ/FASTA file</code> (as multiple datasets), Cmd-shift Select:<ul>
+<li><code>GSM461176_untreat_single.fastq.gz</code></li>
+<li><code>GSM461179_treat_single.fastq.gz</code></li>
+</ul>
+</li>
+<li><code>Custom or built-in reference genome:</code> Use a built-in index</li>
+<li><code>Reference genome with or without an annotation:</code> use genome reference without builtin gene-model</li>
+<li><code>Select reference genome:</code> Drosophila Melanogaster (dm6)</li>
+<li><code>Gene model (gff3,gtf) file for splice junctions:</code> the imported Drosophila_melanogaster.BDGP6.95.gtf</li>
+<li><code>Length of the genomic sequence around annotated junctions:</code> 44 (This parameter should be length of reads - 1, see above table from fastQC/multiQC analysis)</li>
+</ol>
+</li>
+<li><code>Execute</code></li>
+</ol>
+<hr />
+<p><img alt="" src="../images/redo.png" /></p>
+<p>Redo the STAR run with</p>
+<p><strong>3.2</strong>    Select the <code>RNA STAR</code> tool with the following parameters to map your reads on the reference genome:
+   <code>RNA-Seq FASTQ/FASTA file</code> (as multiple datasets), Cmd-shift Select:
+          - <code>GSM461182_untreat_single.fastq.gz</code></p>
+<p><strong>3.7</strong>    <code>Length of the genomic sequence around annotated junctions:</code> 74 (This parameter should be length of reads - 1, see above table from fastQC/multiQC analysis)</p>
               
             </div>
           </div>
@@ -212,10 +241,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../star/" class="btn btn-neutral float-right" title="RNA STAR">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../hisat2/" class="btn btn-neutral float-right" title="HiSAT2">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Cutadapt/" class="btn btn-neutral" title="Optional filtering of reads on sequence quality"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../mapping/" class="btn btn-neutral" title="Mapping"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -241,10 +270,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../Cutadapt/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../mapping/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../star/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../hisat2/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

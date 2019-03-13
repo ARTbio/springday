@@ -93,6 +93,9 @@
     <a class="current" href="./">Transcript Quantification</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#transcript-quantification">Transcript Quantification</a></li>
+    
+
     </ul>
                 </li>
                 <li class="">
@@ -124,6 +127,14 @@
                 <li class="">
                     
     <a class="" href="../mapping/">Mapping</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../star/">RNA STAR</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../hisat2/">HiSAT2</a>
                 </li>
                 <li class="">
                     
@@ -191,7 +202,24 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="transcript-quantification"><img alt="" src="../images/lamp.png" /> Transcript Quantification</h1>
+<p><img alt="" src="../images/transcript_quant.png" /></p>
+<p>Note that we use absolute read counts because we are going to compare counts across samples.</p>
+<p>Other metrics for comparison of genes within the same sample are:</p>
+<ul>
+<li>CPM (Counts Per Million) Each gene count is divided by the corresponding library size (in millions).</li>
+<li>RPKM (reads per kilobase of exons per million mapped reads)</li>
+<li>
+<p>TPM    (Transcript per Million)</p>
+<hr />
+<ol>
+<li>Divide the read counts by the length of each gene in kilobases. This gives you reads per kilobase (RPK).</li>
+<li>Sum up all the RPK values in a sample and divide this number by 1,000,000. This is your “per million” scaling factor.</li>
+<li>Divide the RPK values by the “per million” scaling factor. This gives you TPM</li>
+</ol>
+<hr />
+</li>
+</ul>
               
             </div>
           </div>
