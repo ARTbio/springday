@@ -7,7 +7,8 @@ The aim of the training is to teach methods and best practices in using the Gala
 Attendees will work in a personal Galaxy account and perform a complete RNAseq analysis whose protocol can be seen [here](https://artbio.github.io/springday/), from sequence quality check to differential expression analysis and Gene Ontology term enrichments. The training will also cover visualisation of data in various genome browsers.
 
 ## Where ?
-[Atrium of Sorbonne Université](https://drive.google.com/open?id=1hOogl-2tKCtwgsyf0v7ztigLBU0&usp=sharing)
+### [Atrium of Sorbonne Université](https://drive.google.com/open?id=1hOogl-2tKCtwgsyf0v7ztigLBU0&usp=sharing)
+### room 102
 
 ## When ?
 March 21st, 2019
@@ -26,7 +27,7 @@ A buffet will be available to attendees between 12:30 am and 2:00 pm
 
 ## Material
 ### Computers
-We have 25 slots with computers that can run either Ubuntu or Windows to your convenience (no Macintosh). We have enrolled 29 participants because the room is large enough. Therefore, you are invited to bring your labtop if you have one, especially if you prefer to use MacOS X. The only requirements for your labtops are (i) a working web browser and (ii) a working wifi connection. Do not worry about the power (RAM, processors, storage) or the screen size of your labtop: we often use labtops and it works !
+We have 20 slots with computers that can run either Ubuntu or Windows to your convenience (no Macintosh). We have enrolled 29 participants because the room is large enough. Therefore, you are invited to bring your labtop if you have one, especially if you prefer to use MacOS X. The only requirements for your labtops are (i) a working web browser and (ii) a working wifi connection. Do not worry about the power (RAM, processors, storage) or the screen size of your labtop: we often use labtops and it works !
 
 2 or 3 identical Galaxy servers will be deployed for exclusive usage of the attendees. These servers no be kept alive after the training day. However, canonical histories and workflows of the training will be made available to attendees in a public Galaxy server. The workflows will be also deposited in this GitHub repository.
 
