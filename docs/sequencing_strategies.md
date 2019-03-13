@@ -1,4 +1,4 @@
-# Inserts and sequencing strategies
+# ![](images/lamp.png) Inserts and sequencing strategies
 
 ![](images/sequencing_strategies.png)
 

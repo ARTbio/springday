@@ -16,6 +16,8 @@ nav:
     - Optional filtering of reads on sequence quality: Cutadapt.md
   - Mapping:
     - Mapping: mapping.md
+    - RNA STAR: star.md
+    - HiSAT2: hisat2.md
     - Inspection of the mapping results: visualisation.md
   - Analysis of the differential gene expression:
     - Count the number of reads per annotated gene: count.md

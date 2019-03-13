@@ -1,3 +1,4 @@
+ ![](images/lamp.png)
 # Focus on quality control & “filtering” in RNAseq analysis
 
 ## It is tempting to **filter** the data to get “good counts”

@@ -1,4 +1,4 @@
-# cDNA synthesis
+# ![](images/lamp.png) cDNA synthesis
 
 ## Oligo-dT
 

@@ -1,7 +1,10 @@
+![](images/galaxylogo.png)
+
 # Quality Control
 
 ## FastQC tool to analyse the fastq (or fastq.gz) datasets
 
+----
 ![](images/tool_small.png)
 
   1. create a new history and name it `Quality Control`
@@ -16,13 +19,16 @@
   5. Shift-Click to select all 11 datasets
   
   6. Click `Execute`
-  
+  ----
+   
   ![](images/oeil.png)
   
-  - Look at the results of `FastQC`: These are the datasets named `FastQC on data xx: Webpage`  
+  - Look at the results of `FastQC`: These are the datasets named `FastQC on data xx: Webpage`
+  ----
   
 ## MultiQC to aggregate and have a general view of sequence qualities in the project
 
+----
   ![](images/tool_small.png)
   
   1. Select the `MultiQC`tool (you can use the search bar).
@@ -35,6 +41,7 @@
   `FastQC on xx: RawData`
   
   5. Click `Execute`
+  ----
   
   ![](images/oeil.png)
   
@@ -44,3 +51,4 @@
   - Pay attention to the `Sequence Quality Histograms`. What can you say about the
   quality of the samples ?
   - Have a look to the `Adapter Content` section.
+  ----

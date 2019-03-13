@@ -31,6 +31,9 @@ and (iii) the sequencing technology used (single read or paired-end).
 - GSM461181_treat_paired <-> SRR031726_treat_paired
 - GSM461182_untreat_single <-> SRR031728_untreat_single
 
+----
+![](images/galaxylogo.png)
+
 ## Data upload
 
 We will take benefit of this mandatory stage, to review various possibilities to upload
@@ -42,12 +45,19 @@ session.
 
 ### Uploading data from your local computer
 
+----
+![](images/tool_small.png)
+
 1. Download the sample [GSM461176/SRR031709](ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031709/SRR031709.fastq.gz) to your
 computer.
 2. Upload this local file SRR031709.fastq.gz to your Galaxy history using the upload/Download
-Galaxy interface that pops up if you click the upload icone (put image).
+Galaxy interface that pops up if you click the upload icone  ![](images/upload_button.png)
+----
 
-### Importing data via links
+### Importing data via links !
+
+----
+[](images/tool_small.png)
 
 The sample `GSM461177/SRR031714` was sequenced using paired-end sequencing. Thus, there are 2 files for forward
 and reverse reading of DNA fragment ends, respectively.
@@ -59,16 +69,22 @@ and reverse reading of DNA fragment ends, respectively.
 
 However, do not download these files on your local machine.
 
-Instead, copy the links
+----
 
-    ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_1.fastq.gz
-    ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_2.fastq.gz
+1. Instead, copy the links
+    
+```
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR031/SRR031714/SRR031714_2.fastq.gz
+```
+    
+2. and paste them in the `Paste/Fetch data` tab of the Galaxy upload interface.
 
-and paste them in the `Paste/Fetch data` tab of the Galaxy upload interface.
+3. In addition, select `fastqsanger.gz` in the `Type` menu.
 
-In addition, select `fastqsanger.gz` in the `Type` menu.
+4. Press the start button.
 
-Press the start button.
+----
 
 ### Importing data via the `EBI SRA ENA SRA`
 
@@ -76,23 +92,25 @@ The sample `GSM461178/SRR031716` is also a paired-end sequencing.
 
 This time, we are going to download the two corresponding fastq.gz files directly from
 the EBI SRA using the tool `EBI SRA ENA SRA` in the `Get data` tool submenu.
-
-![](images/tool_small.png)
-
-    1. Click on the tool `EBI SRA ENA SRA` (you can select it rapidly using the search bar)
-    
-    2. In the search box of the EBI SRA website, enter `SRR031716`
-    
-    3. Two categories of results are retrieved, Experiment and Run.
+----
+ ![](images/tool_small.png)
+----
+  
+  1. Click on the tool `EBI SRA ENA SRA` (you can select it rapidly using the search bar)
+  
+  2. In the search box of the EBI SRA website, enter `SRR031716`
+  
+  3. Two categories of results are retrieved, Experiment and Run.
     What we want to get are the files from the sequencing runs. Thus, click the
     SRR031716 link in the Run section (1 results found).
-    
-    4. Click on "File 1" in the `FASTQ files (Galaxy)` Column.
+  
+  4. Click on "File 1" in the `FASTQ files (Galaxy)` Column.
     You will be switched back to the Galaxy interface, and the download of the
     SRR031716_1.fastq.gz file will start immediately as a yellow dataset in the history right panel.
     
     Without waiting for the complete download of SRR031716_1.fastq.gz, you can repeat
     the previous steps 1, 2, 3 and 4. Just Click on `File 2` instead of `File 1` in step 4
+----
     
 ### Importing data from data libraries
 
@@ -106,19 +124,21 @@ All datasets have been preloaded in the data library named `RNAseq`.
 
 To access this library and import its content in your histories:
 
-![](images/tool_small.png)
-
-    1. Click the menu `Données partagées` (`Shared data`) and select the submenu
-    `Bibliothèque de Données` (`Data libraries`).
-    
-    2. Navigate to the data library `RNAseq`
-    
-    3. Select all datasets
-    
-    4. Click the `To History` button and select `as Datasets`
-    
-    5. In the pop up window, `or create new` and type `Input data` to transfer the datasets
-    in a new history with this name.
-    
-    6. Click on the green box to navigate to this new history (or click on the main menu `analyse data`)
-    and start using these datasets.
+  ----
+  ![](images/tool_small.png)
+  
+  1. Click the menu `Données partagées` (`Shared data`) and select the submenu
+  `Bibliothèque de Données` (`Data libraries`).
+  
+  2. Navigate to the data library `RNAseq`
+  
+  3. Select all datasets
+  
+  4. Click the `To History` button and select `as Datasets`
+  
+  5. In the pop up window, `or create new` and type `Input data` to transfer the datasets
+  in a new history with this name.
+  
+  6. Click on the green box to navigate to this new history (or click on the main menu `analyse data`)
+  and start using these datasets.
+----
