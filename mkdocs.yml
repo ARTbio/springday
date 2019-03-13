@@ -4,6 +4,16 @@ nav:
   - Pretreatments:
     - Data upload: uploads.md
     - Quality control: QC.md
+  - Outline and general concepts for the RNAseq analysis:
+    - RNAseq librairies - cDNA synthesis: cDNAs.md
+    - RNAseq librairies - Inserts and sequencing strategies: sequencing_strategies.md
+    - The key idea in Reference-base Expression analysis: readcounts.md
+    - Reflecting on quality control & “filtering” in RNAseq analysis: read_filtering.md
+    - Transcript Quantification: transcript_quant.md
+    - Statistical Analysis of Differential expression: RNAseq_DE.md
+    - Experimental procedures affect downstream analyses: outline_conclusion.md
+  - Quality filtering:
+    Optional filtering of reads on sequence quality: Cutadapt.md
   - Mapping:
     - Mapping: mapping.md
     - Inspection of the mapping results: visualisation.md
