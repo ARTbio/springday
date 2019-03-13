@@ -131,7 +131,24 @@
     <a class="current" href="./">HiSAT2</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#hisat2-option-for-50-of-attendees">HISAT2  (option for 50 % of attendees)</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#rename-your-datasets">Rename your datasets !</a></li>
+        
+        </ul>
+    
+
     </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../bam/">BAM inspection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../map_visu.md">Visualisation of read mapping</a>
                 </li>
                 <li class="">
                     
@@ -199,7 +216,92 @@
           <div role="main">
             <div class="section">
               
-                
+                <p><img alt="" src="../images/galaxylogo.png" /></p>
+<h1 id="hisat2-option-for-50-of-attendees">HISAT2  (option for 50 % of attendees)</h1>
+<hr />
+<p><img alt="" src="../images/tool_small.png" /></p>
+<ol>
+<li>create a new history and name it <code>HISAT2</code></li>
+<li>Import the 11 datasets from the RNAseq data library to this <code>RNA STAR</code> history, plus the Drosophila_melanogaster.BDGP6.95.gtf file</li>
+<li>Select the <code>HISAT2</code> tool with the following parameters to map your reads on the reference genome:<ol>
+<li><code>Source for the reference genome</code>: Use a builtin genome</li>
+<li><code>Select a reference genome</code> : <strong>dm6</strong></li>
+<li><code>Is this a single or paired library:</code> Single-End</li>
+<li>`FASTA/Q file:<ul>
+<li><code>GSM461176_untreat_single.fastq.gz</code></li>
+<li><code>GSM461179_treat_single.fastq.gz</code></li>
+<li><code>GSM461182_untreat_single.fastq.gz</code></li>
+</ul>
+</li>
+<li><code>Specify strand information:</code> Unstranded</li>
+<li><code>Summary options</code><ul>
+<li><code>Output alignment summary in a more machine-friendly style.</code>: YES</li>
+<li><code>Print alignment summary to a file.</code>: YES</li>
+</ul>
+</li>
+<li>Leave other settings as defaults</li>
+</ol>
+</li>
+<li><code>Execute</code></li>
+</ol>
+<hr />
+<p><img alt="" src="../images/redo.png" /></p>
+<p>Redo the HISAT2 run for paired-end files</p>
+<ol>
+<li>Rerun the <code>HISAT2</code> tool with the following parameters to map your reads on the reference genome:<ol>
+<li><code>Source for the reference genome</code>: Use a builtin genome</li>
+<li><code>Select a reference genome</code> : <strong>dm6</strong></li>
+<li><code>Is this a single or paired library:</code> Paired-End</li>
+<li>`FASTA/Q file #1:<ul>
+<li><code>GSM461177_1_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461178_1_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461180_1_treat_paired.fastq.gz</code></li>
+<li><code>GSM461181_1_treat_paired.fastq.gz</code></li>
+</ul>
+</li>
+<li>`FASTA/Q file #2:<ul>
+<li><code>GSM461177_2_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461178_2_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461180_2_treat_paired.fastq.gz</code></li>
+<li><code>GSM461181_2_treat_paired.fastq.gz</code></li>
+</ul>
+</li>
+<li><code>Specify strand information:</code> Unstranded</li>
+<li>Leave other settings as defaults (since you are redoing a run)</li>
+</ol>
+</li>
+<li><code>Execute</code></li>
+</ol>
+<h2 id="rename-your-datasets">Rename your datasets !</h2>
+<hr />
+<p><img alt="" src="../images/rename_datasets.png" /></p>
+<p>You need now to rename you datasets to facilitate your downstream analysis.</p>
+<p>Be quiet and focus ! No hurry, this is an <em>important task</em> in the analysis.</p>
+<ol>
+<li>
+<p>Search and select datasets with HISAT2 <img alt="" src="../images/search_hisat2.png" /></p>
+</li>
+<li>
+<p>Click on the info icon <img alt="" src="../images/info.png" /> of both <code>(BAM)</code> and <code>Mapping summary</code> files</p>
+</li>
+<li>
+<p>Copy the name or one of the two names of the datasets as shown bellow
+<img alt="" src="../images/copy.png" /></p>
+</li>
+<li>Now click on the pencil icon of the <em><em>same</em></em> dataset
+<img alt="" src="../images/pencil.png" /></li>
+<li>Paste your text in the <code>Name</code> field of the dataset
+<img alt="" src="../images/paste.png" /></li>
+<li>Edit your text as follow for <code>Mapping summary</code> files
+<img alt="" src="../images/edit_log.png" /></li>
+<li>
+<p>Edit your text as follow for <code>(BAM)</code> files
+<img alt="" src="../images/edit_bam.png" /></p>
+</li>
+<li>
+<p>repeat <em>ad lib</em> for all Mapping summary and (BAM) files </p>
+</li>
+</ol>
               
             </div>
           </div>
@@ -207,7 +309,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../visualisation/" class="btn btn-neutral float-right" title="Inspection of the mapping results">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../bam/" class="btn btn-neutral float-right" title="BAM inspection">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../star/" class="btn btn-neutral" title="RNA STAR"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -239,7 +341,7 @@
         <span><a href="../star/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../visualisation/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../bam/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

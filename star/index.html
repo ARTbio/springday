@@ -129,12 +129,26 @@
             
     <li class="toctree-l3"><a href="#rna-star-option-for-50-of-attendees">RNA STAR (option for 50 % of attendees)</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#rename-your-datasets">Rename your datasets !</a></li>
+        
+        </ul>
+    
 
     </ul>
                 </li>
                 <li class="">
                     
     <a class="" href="../hisat2/">HiSAT2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../bam/">BAM inspection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../map_visu.md">Visualisation of read mapping</a>
                 </li>
                 <li class="">
                     
@@ -213,7 +227,7 @@
 <li>Import the 11 datasets from the RNAseq data library to this <code>RNA STAR</code> history, plus the Drosophila_melanogaster.BDGP6.95.gtf file</li>
 <li>Select the <code>RNA STAR</code> tool with the following parameters to map your reads on the reference genome:<ol>
 <li><code>Single-end or paired-end reads</code>: Single-end</li>
-<li><code>RNA-Seq FASTQ/FASTA file</code> (as multiple datasets), Cmd-shift Select:<ul>
+<li><code>RNA-Seq FASTQ/FASTA file</code> (multiple datasets button), Cmd-shift Select:<ul>
 <li><code>GSM461176_untreat_single.fastq.gz</code></li>
 <li><code>GSM461179_treat_single.fastq.gz</code></li>
 </ul>
@@ -234,6 +248,65 @@
    <code>RNA-Seq FASTQ/FASTA file</code> (as multiple datasets), Cmd-shift Select:
           - <code>GSM461182_untreat_single.fastq.gz</code></p>
 <p><strong>3.7</strong>    <code>Length of the genomic sequence around annotated junctions:</code> 74 (This parameter should be length of reads - 1, see above table from fastQC/multiQC analysis)</p>
+<hr />
+<p><img alt="" src="../images/redo.png" /></p>
+<p>Redo a last STAR run for paired-end datasets</p>
+<ol>
+<li>With the following parameters to map your reads on the reference genome:<ol>
+<li><code>Single-end or paired-end reads</code>: Paired-end (as multiple datasets)</li>
+<li><code>RNA-Seq FASTQ/FASTA file, forward reads</code> (multiple datasets button), Cmd-shift Select:<ul>
+<li><code>GSM461177_1_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461178_1_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461180_1_treat_paired.fastq.gz</code></li>
+<li>`GSM461181_1_treat_paired.fastq.gz</li>
+</ul>
+</li>
+<li><code>RNA-Seq FASTQ/FASTA file, forward reads</code> (multiple datasets button), Cmd-shift Select:<ul>
+<li><code>GSM461177_2_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461178_2_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461180_2_treat_paired.fastq.gz</code></li>
+<li>`GSM461181_2_treat_paired.fastq.gz</li>
+</ul>
+</li>
+<li><code>Custom or built-in reference genome:</code> Use a built-in index</li>
+<li><code>Reference genome with or without an annotation:</code> use genome reference without builtin gene-model</li>
+<li><code>Select reference genome:</code> Drosophila Melanogaster (dm6)</li>
+<li><code>Gene model (gff3,gtf) file for splice junctions:</code> the imported Drosophila_melanogaster.BDGP6.95.gtf</li>
+<li><code>Length of the genomic sequence around annotated junctions:</code> <strong>36</strong> (This parameter should be length of reads - 1, see above table from fastQC/multiQC analysis)</li>
+</ol>
+</li>
+<li><code>Execute</code></li>
+</ol>
+<h2 id="rename-your-datasets">Rename your datasets !</h2>
+<hr />
+<p><img alt="" src="../images/rename_datasets.png" /></p>
+<p>You need now to rename you datasets to facilitate your downstream analysis.</p>
+<p>Be quiet and focus ! No hurry, this is an <em>important task</em> in the analysis.</p>
+<ol>
+<li>
+<p>Search and select datasets with RNA STAR <img alt="" src="../images/search_star.png" /></p>
+</li>
+<li>
+<p>Click on the info icon <img alt="" src="../images/info.png" /> of both <code>log</code> and <code>bam</code> files</p>
+</li>
+<li>
+<p>Copy the name or one of the two names of the datasets as shown bellow
+<img alt="" src="../images/copy.png" /></p>
+</li>
+<li>Now click on the pencil icon of the <em><em>same</em></em> dataset
+<img alt="" src="../images/pencil.png" /></li>
+<li>Paste your text in the <code>Name</code> field of the dataset
+<img alt="" src="../images/paste.png" /></li>
+<li>Edit your text as follow for <code>log</code> files
+<img alt="" src="../images/edit_log.png" /></li>
+<li>
+<p>Edit your text as follow for <code>bam</code> files
+<img alt="" src="../images/edit_bam.png" /></p>
+</li>
+<li>
+<p>repeat <em>ad lib</em> for all <code>log</code> and <code>bam</code> files </p>
+</li>
+</ol>
               
             </div>
           </div>

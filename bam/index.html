@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Identification of the differentially expressed features - Galaxy Spring day 2019</title>
+  <title>BAM inspection - Galaxy Spring day 2019</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Identification of the differentially expressed features";
-    var mkdocs_page_input_path = "DE.md";
+    var mkdocs_page_name = "BAM inspection";
+    var mkdocs_page_input_path = "bam.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -130,9 +130,15 @@
                     
     <a class="" href="../hisat2/">HiSAT2</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../bam/">BAM inspection</a>
+    <a class="current" href="./">BAM inspection</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#inspection-of-bam-files">Inspection of BAM files</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
@@ -153,12 +159,9 @@
                     
     <a class="" href="../count/">Count the number of reads per annotated gene</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Identification of the differentially expressed features</a>
-    <ul class="subnav">
-            
-    </ul>
+    <a class="" href="../DE/">Identification of the differentially expressed features</a>
                 </li>
                 <li class="">
                     
@@ -193,11 +196,11 @@
     
       
         
-          <li>Analysis of the differential gene expression &raquo;</li>
+          <li>Mapping &raquo;</li>
         
       
     
-    <li>Identification of the differentially expressed features</li>
+    <li>BAM inspection</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -207,7 +210,12 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="inspection-of-bam-files">Inspection of BAM files</h1>
+<hr />
+<p><img alt="" src="../images/lamp.png" /></p>
+<p>Click on the small eye icon of a Bam dataset (generated either with <code>RNA STAR</code> or <code>HISAT2</code>)</p>
+<p>The header contains the chromosome specifications (their name and length) and other informations
+such as the software that generation the Bam file and the command line to run the software.</p>
               
             </div>
           </div>
@@ -215,10 +223,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../DEvisu/" class="btn btn-neutral float-right" title="Visualization of the differentially expressed genes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../visualisation/" class="btn btn-neutral float-right" title="Inspection of the mapping results">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../count/" class="btn btn-neutral" title="Count the number of reads per annotated gene"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../hisat2/" class="btn btn-neutral" title="HiSAT2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -244,10 +252,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../count/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../hisat2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../DEvisu/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../visualisation/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
