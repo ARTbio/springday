@@ -13,7 +13,7 @@ nav:
     - Statistical Analysis of Differential expression: RNAseq_DE.md
     - Experimental procedures affect downstream analyses: outline_conclusion.md
   - Quality filtering:
-    Optional filtering of reads on sequence quality: Cutadapt.md
+    - Optional filtering of reads on sequence quality: Cutadapt.md
   - Mapping:
     - Mapping: mapping.md
     - Inspection of the mapping results: visualisation.md
