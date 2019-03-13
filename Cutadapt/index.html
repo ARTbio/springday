@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Mapping - Galaxy Spring day 2019</title>
+  <title>Optional filtering of reads on sequence quality - Galaxy Spring day 2019</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Mapping";
-    var mkdocs_page_input_path = "mapping.md";
+    var mkdocs_page_name = "Optional filtering of reads on sequence quality";
+    var mkdocs_page_input_path = "Cutadapt.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -107,9 +107,27 @@
 		
     <span class="caption-text">Quality filtering</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../Cutadapt/">Optional filtering of reads on sequence quality</a>
+    <a class="current" href="./">Optional filtering of reads on sequence quality</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#filtering-datasets-to-remove-or-trim-low-quality-sequences">Filtering datasets to remove or trim low quality sequences</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#this-step-is-optional-and-should-be-performed-by-50-of-attendees">This step is optional and should be performed by 50% of attendees.</a></li>
+        
+            <li><a class="toctree-l4" href="#cutadapt-with-single-reads">Cutadapt with single reads</a></li>
+        
+            <li><a class="toctree-l4" href="#cutadapt-with-paired-end-reads">Cutadapt with paired-end reads</a></li>
+        
+            <li><a class="toctree-l4" href="#run-multiqc-on-cutadapt-jobs">Run MultiQC on Cutadapt jobs</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -118,12 +136,9 @@
 		
     <span class="caption-text">Mapping</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Mapping</a>
-    <ul class="subnav">
-            
-    </ul>
+    <a class="" href="../mapping/">Mapping</a>
                 </li>
                 <li class="">
                     
@@ -177,11 +192,11 @@
     
       
         
-          <li>Mapping &raquo;</li>
+          <li>Quality filtering &raquo;</li>
         
       
     
-    <li>Mapping</li>
+    <li>Optional filtering of reads on sequence quality</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -191,7 +206,65 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="filtering-datasets-to-remove-or-trim-low-quality-sequences">Filtering datasets to remove or trim low quality sequences</h1>
+<h2 id="this-step-is-optional-and-should-be-performed-by-50-of-attendees">This step is optional and should be performed by 50% of attendees.</h2>
+<h2 id="cutadapt-with-single-reads">Cutadapt with single reads</h2>
+<p><img alt="" src="../images/tool_small.png" /></p>
+<ol>
+<li>Create a new history <code>Cutapdapt</code></li>
+<li>Copy the fastq files from the RNAseq data library to this new history</li>
+<li>Select the <code>Cutadapt</code> tool</li>
+<li>Start with selecting <code>Single-end</code> in the <code>Single-end or Paired-end reads?</code> menu</li>
+<li>Select the multiple datasets button for this menu</li>
+<li>Cmd-Click for discontinuous multiple selection of <code>single</code> fastq.gz files (3 datasets)</li>
+<li><code>Filter Options</code></li>
+<li><code>Minimum length</code>: 20</li>
+<li><code>Read Modification Options</code></li>
+<li><code>Quality cutoff</code>: 20</li>
+<li><code>Output Options</code></li>
+<li><code>Report</code>: Yes</li>
+<li>Do not change the other available parameters and click <code>Execute</code></li>
+</ol>
+<h2 id="cutadapt-with-paired-end-reads">Cutadapt with paired-end reads</h2>
+<p>Repeat the same procedure as above, except that you select <code>Paired-end</code>in step 4:
+Re-Run the tool using the re-run button on one Cutadapt instance and just select <code>Paired-end</code>
+instead of <code>Single-end</code></p>
+<ul>
+<li>
+<p>Then you have two input boxes, one for file #1 and one for file #2.</p>
+</li>
+<li>
+<p>In the box <code>file #1</code> click the <code>multiple datasets</code> button and carefully Select
+the fastq.gz files with the <code>_1</code> suffix</p>
+</li>
+<li>
+<p>In the box <code>file #2</code> click the <code>multiple datasets</code> button and carefully Select
+the fastq.gz files with the <code>_2</code> suffix</p>
+</li>
+<li>
+<p>Do not change the other parameters (they are set to the same value as previously because
+you used the re-run button).</p>
+</li>
+<li>
+<p>Click the <code>Execute</code> button</p>
+</li>
+</ul>
+<h2 id="run-multiqc-on-cutadapt-jobs">Run MultiQC on Cutadapt jobs</h2>
+<p><img alt="" src="../images/tool_small.png" /></p>
+<ol>
+<li>Select <code>MultiQC</code> tool</li>
+<li>Select <code>Cutadapt/Trim Galore!</code> in the menu <code>Which tool was used generate logs?</code></li>
+<li>Cmd-Select the <code>Report</code> datasets generated by Cutadapt</li>
+<li>Press <code>Execute</code></li>
+<li>Now, the borring but essential job: Rename carefully the <code>Output</code> datasets generated
+by Cutadapt. To do so, help yourself with the <code>Info</code> button at the bottom of dataset green
+boxes.</li>
+</ol>
+<p>Example: Rename <code>Cutadapt on data 10 and data 9: Read 2 Output</code> in <code>GSM461181_2_treat_paired.fastq.gz</code></p>
+<ol>
+<li>Trash the 11 unfiltered/trimmed fastq.gz files. This is important to avoid mixing
+filtered and non filtered datasets in the next steps.</li>
+</ol>
               
             </div>
           </div>
@@ -199,10 +272,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../visualisation/" class="btn btn-neutral float-right" title="Inspection of the mapping results">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../mapping/" class="btn btn-neutral float-right" title="Mapping">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Cutadapt/" class="btn btn-neutral" title="Optional filtering of reads on sequence quality"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../outline_conclusion/" class="btn btn-neutral" title="Experimental procedures affect downstream analyses"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -228,10 +301,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../Cutadapt/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../outline_conclusion/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../visualisation/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../mapping/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

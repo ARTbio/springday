@@ -72,10 +72,58 @@
         
             <li><a class="toctree-l4" href="#fastqc-tool-to-analyse-the-fastq-or-fastqgz-datasets">FastQC tool to analyse the fastq (or fastq.gz) datasets</a></li>
         
+            <li><a class="toctree-l4" href="#multiqc-to-aggregate-and-have-a-general-view-of-sequence-qualities-in-the-project">MultiQC to aggregate and have a general view of sequence qualities in the project</a></li>
+        
         </ul>
     
 
     </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Outline and general concepts for the RNAseq analysis</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../cDNAs/">RNAseq librairies - cDNA synthesis</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../sequencing_strategies/">RNAseq librairies - Inserts and sequencing strategies</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../readcounts/">The key idea in Reference-base Expression analysis</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../read_filtering/">Reflecting on quality control & “filtering” in RNAseq analysis</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../transcript_quant/">Transcript Quantification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../RNAseq_DE/">Statistical Analysis of Differential expression</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../outline_conclusion/">Experimental procedures affect downstream analyses</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Quality filtering</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Cutadapt/">Optional filtering of reads on sequence quality</a>
                 </li>
     </ul>
 	    </li>
@@ -178,6 +226,38 @@
 <p>Click <code>Execute</code></p>
 </li>
 </ol>
+<p><img alt="" src="../images/oeil.png" /></p>
+<ul>
+<li>Look at the results of <code>FastQC</code>: These are the datasets named <code>FastQC on data xx: Webpage</code>  </li>
+</ul>
+<h2 id="multiqc-to-aggregate-and-have-a-general-view-of-sequence-qualities-in-the-project">MultiQC to aggregate and have a general view of sequence qualities in the project</h2>
+<p><img alt="" src="../images/tool_small.png" /></p>
+<ol>
+<li>
+<p>Select the <code>MultiQC</code>tool (you can use the search bar).</p>
+</li>
+<li>
+<p><code>Which tool was used generate logs?</code> : Select <code>FastQC</code></p>
+</li>
+<li>
+<p><code>Type of FastQC output?</code> : Select <code>Raw data</code></p>
+</li>
+<li>
+<p><code>FastQC output</code> Cmd-Click (discontinuous, multiple selection) the <em>11</em> files named
+  <code>FastQC on xx: RawData</code></p>
+</li>
+<li>
+<p>Click <code>Execute</code></p>
+</li>
+</ol>
+<p><img alt="" src="../images/oeil.png" /></p>
+<p>Look at the result of <code>MultiQC</code>, dataset named <code>MultiQC on ...: Webpage</code></p>
+<ul>
+<li>Pay attention to the General Statistics that indicate the read sizes.</li>
+<li>Pay attention to the <code>Sequence Quality Histograms</code>. What can you say about the
+  quality of the samples ?</li>
+<li>Have a look to the <code>Adapter Content</code> section.</li>
+</ul>
               
             </div>
           </div>
@@ -185,7 +265,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../mapping/" class="btn btn-neutral float-right" title="Mapping">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../cDNAs/" class="btn btn-neutral float-right" title="RNAseq librairies - cDNA synthesis">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../uploads/" class="btn btn-neutral" title="Data upload"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -217,7 +297,7 @@
         <span><a href="../uploads/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../mapping/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../cDNAs/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
