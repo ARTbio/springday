@@ -30,12 +30,12 @@
       1. `Source for the reference genome`: Use a builtin genome
       2. `Select a reference genome` : **dm6**
       3. `Is this a single or paired library:` Paired-End
-      4. `FASTA/Q file #1:
+      4. `FASTA/Q file #1`:
           - `GSM461177_1_untreat_paired.fastq.gz`
           - `GSM461178_1_untreat_paired.fastq.gz`
           - `GSM461180_1_treat_paired.fastq.gz`
           - `GSM461181_1_treat_paired.fastq.gz`
-      4. `FASTA/Q file #2:
+      4. `FASTA/Q file #2`:
           - `GSM461177_2_untreat_paired.fastq.gz`
           - `GSM461178_2_untreat_paired.fastq.gz`
           - `GSM461180_2_treat_paired.fastq.gz`

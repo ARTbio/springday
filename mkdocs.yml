@@ -21,6 +21,7 @@ nav:
     - BAM inspection: bam.md
     - Visualisation of read mapping: visu_map.md
   - Analysis of the differential gene expression:
+    - Introduction to read counting: intro_counting.md
     - Estimation of the strandness: strandness.md
     - Count the number of reads per annotated gene: count.md
     - Identification of the differentially expressed features: DE.md
