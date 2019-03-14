@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Mapping - Galaxy Spring day 2019</title>
+  <title>Introduction to read counting - Galaxy Spring day 2019</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Mapping";
-    var mkdocs_page_input_path = "mapping.md";
+    var mkdocs_page_name = "Introduction to read counting";
+    var mkdocs_page_input_path = "intro_counting.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -118,15 +118,9 @@
 		
     <span class="caption-text">Mapping</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Mapping</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#mapping-the-reads-to-the-reference-genome">Mapping the reads to the reference genome</a></li>
-    
-
-    </ul>
+    <a class="" href="../mapping/">Mapping</a>
                 </li>
                 <li class="">
                     
@@ -151,9 +145,23 @@
 		
     <span class="caption-text">Analysis of the differential gene expression</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../intro_counting/">Introduction to read counting</a>
+    <a class="current" href="./">Introduction to read counting</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#counting-strategy">Counting strategy</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#count-the-number-of-reads-per-annotated-gene">Count the number of reads per annotated gene</a></li>
+        
+            <li><a class="toctree-l4" href="#counting-tools">Counting tools</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
@@ -200,11 +208,11 @@
     
       
         
-          <li>Mapping &raquo;</li>
+          <li>Analysis of the differential gene expression &raquo;</li>
         
       
     
-    <li>Mapping</li>
+    <li>Introduction to read counting</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -214,9 +222,65 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="mapping-the-reads-to-the-reference-genome">Mapping the reads to the reference genome</h1>
-<p><img alt="" src="../images/lamp.png" /> </p>
-<p><img alt="" src="../images/splice_aware_alignment.png" /></p>
+                <h1 id="counting-strategy">Counting strategy <img alt="" src="../images/lamp.png" /></h1>
+<p><img alt="" src="../images/readcounts.png" /></p>
+<h2 id="count-the-number-of-reads-per-annotated-gene">Count the number of reads per annotated gene</h2>
+<p>To compare the expression of single genes between different conditions
+(e.g. with or without <em>Pasilla</em> depletion), an essential first step is to quantify
+the number of reads per gene.</p>
+<p><img alt="" src="../images/gene_counting.png" /></p>
+<p>From the image above, we can compute:</p>
+<h3 id="number-of-reads-per-exons">Number of reads per exons</h3>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Exon</th>
+<th>Number of reads</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gene1</td>
+<td>exon1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>gene1</td>
+<td>exon2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>gene2</td>
+<td>exon1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>gene2</td>
+<td>exon2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>gene2</td>
+<td>exon3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The gene1 has 4 reads, not 5 (gene1 - exon1 + gene1 - exon2) because of the splicing of the last read.</li>
+<li>The gene2 has 6 reads (3 spliced reads)</li>
+</ul>
+<h2 id="counting-tools">Counting tools</h2>
+<p>Two main tools could be used for that: HTSeq-count
+(<a href="https://academic.oup.com/bioinformatics/article/31/2/166/2366196">Anders et al, Bioinformatics, 2015</a>)
+or featureCounts (<a href="https://academic.oup.com/bioinformatics/article/31/2/166/2366196">Liao et al, Bioinformatics, 2014</a>).
+FeatureCounts is considerably faster and requires far less computational resources,
+so we will use it here.</p>
+<p>In principle, the counting of reads overlapping with genomic features is a fairly
+simple task. But there are some details that need to be given to featureCounts:
+for example the strandness.</p>
+<p><img alt="" src="../images/sequencing_strategies.png" /></p>
               
             </div>
           </div>
@@ -224,10 +288,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../star/" class="btn btn-neutral float-right" title="RNA STAR">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../strandness/" class="btn btn-neutral float-right" title="Estimation of the strandness">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Cutadapt/" class="btn btn-neutral" title="Optional filtering of reads on sequence quality"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../visu_map/" class="btn btn-neutral" title="Visualisation of read mapping"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -253,10 +317,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../Cutadapt/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../visu_map/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../star/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../strandness/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

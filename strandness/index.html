@@ -145,15 +145,22 @@
 		
     <span class="caption-text">Analysis of the differential gene expression</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../intro_counting/">Introduction to read counting</a>
+                </li>
                 <li class=" current">
                     
     <a class="current" href="./">Estimation of the strandness</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#counting-strategy">Counting strategy</a></li>
-    
-
     <li class="toctree-l3"><a href="#estimation-of-the-strandness">Estimation of the strandness</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#use-of-infer-experiment-tool">Use of Infer Experiment tool</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -213,10 +220,127 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="counting-strategy">Counting strategy</h1>
-<p><img alt="" src="../images/readcounts.png" /></p>
-<p><img alt="" src="../images/sequencing_strategies.png" /></p>
+                <p><img alt="" src="../images/galaxylogo.png" /></p>
 <h1 id="estimation-of-the-strandness">Estimation of the strandness</h1>
+<p>In practice, with Illumina RNA-seq protocols you will most likely deal with either:</p>
+<ul>
+<li>
+<p>Unstranded RNAseq data</p>
+</li>
+<li>
+<p>Stranded RNA-seq data produced with - kits and dUTP tagging (ISR)</p>
+</li>
+</ul>
+<p>This information should be provided with your FASTQ files, ask your sequencing facility!</p>
+<p>If not, try to find it on the site where you downloaded the data or
+in the corresponding publication.</p>
+<p>Another option is to estimate these parameters with a tool called <code>Infer Experiment</code> from
+the <code>RSeQC</code> tool suite. This tool takes the output of your mappings (BAM files), selects
+a subsample of your reads and compares their genome coordinates and strands with those of
+the reference gene model (from an annotation file).</p>
+<p>Based on the strand of the genes, it can gauge whether sequencing is strand-specific,
+and if so, how reads are stranded.</p>
+<h2 id="use-of-infer-experiment-tool">Use of <code>Infer Experiment</code> tool</h2>
+<hr />
+<p><img alt="" src="../images/tool_small.png" /></p>
+<h3 id="convert-gtf-to-bed12-tool-to-convert-the-gtf-file-to-bed"><code>Convert GTF to BED12</code> tool to convert the GTF file to BED</h3>
+<ol>
+<li>Go to your history <code>STAR</code> or <code>HISAT2</code></li>
+<li>Select the tool <code>Convert GTF to BED12</code><ol>
+<li><code>GTF File to convert</code>: Drosophila_melanogaster.BDGP6.95.gtf</li>
+</ol>
+</li>
+<li><code>Execute</code></li>
+</ol>
+<hr />
+<p><img alt="" src="../images/tool_small.png" /></p>
+<h3 id="infer-experiment-tool-to-determine-the-library-strandness"><code>Infer Experiment</code> tool to determine the library strandness</h3>
+<ol>
+<li>In the same history <code>STAR</code> or <code>HISAT2</code></li>
+<li>Select the tool <code>Infer Experiment</code><ol>
+<li><code>Input .bam file</code>: mapped.bam files (outputs of RNA STAR or HISAT2 tools)</li>
+<li><code>Reference gene model</code> : BED12 file (output of Convert GTF to BED12 tool)</li>
+<li><code>Number of reads sampled from SAM/BAM file (default = 200000)</code>: 200000</li>
+</ol>
+</li>
+<li><code>Execute</code></li>
+</ol>
+<hr />
+<p><img alt="" src="../images/lamp.png" /></p>
+<p>Infer Experiment tool tool generates one file with information on:</p>
+<ul>
+<li>Paired-end or single-end library</li>
+<li>Fraction of reads failed to determine</li>
+<li>2 lines:</li>
+<li>For single-end<ul>
+<li>Fraction of reads explained by “++,–” (SF in previous figure)</li>
+<li>Fraction of reads explained by “+-,-+” (SR in previous figure)</li>
+</ul>
+</li>
+<li>For paired-end<ul>
+<li>Fraction of reads explained by “1++,1–,2+-,2-+” (SF in previous figure)</li>
+<li>Fraction of reads explained by “1+-,1-+,2++,2–” (SR in previous figure)</li>
+</ul>
+</li>
+</ul>
+<p>If the two “Fraction of reads explained by” numbers are close to each other,
+we conclude that the library is not a strand-specific dataset (U in previous figure).</p>
+<p>As it is sometimes quite difficult to find out which settings correspond to those of
+other programs, the following table might be helpful to identify the library type:</p>
+<table>
+<thead>
+<tr>
+<th>Library type</th>
+<th>Infer Experiment</th>
+<th>TopHat</th>
+<th>HISAT</th>
+<th>htseq-count</th>
+<th>featureCounts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paired-End (PE) - SF</td>
+<td>1++,1–,2+-,2-+</td>
+<td>FR Second Strand</td>
+<td>Second Strand F/FR</td>
+<td>yes</td>
+<td>Forward (1)</td>
+</tr>
+<tr>
+<td>PE - SR</td>
+<td>1+-,1-+,2++,2–</td>
+<td>FR First Strand</td>
+<td>First Strand R/RF</td>
+<td>reverse</td>
+<td>Reverse (2)</td>
+</tr>
+<tr>
+<td>Single-End (SE) - SF</td>
+<td>+,–</td>
+<td>FR Second Strand</td>
+<td>Second Strand F/FR</td>
+<td>yes</td>
+<td>Forward (1)</td>
+</tr>
+<tr>
+<td>SE - SR</td>
+<td>+-,-+</td>
+<td>FR First Strand</td>
+<td>First Strand R/RF</td>
+<td>reverse</td>
+<td>Reverse (2)</td>
+</tr>
+<tr>
+<td>PE, SE - U</td>
+<td>undecided</td>
+<td>FR Unstranded</td>
+<td>default</td>
+<td>no</td>
+<td>Unstranded (0)</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
@@ -227,7 +351,7 @@
         <a href="../count/" class="btn btn-neutral float-right" title="Count the number of reads per annotated gene">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../visu_map/" class="btn btn-neutral" title="Visualisation of read mapping"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../intro_counting/" class="btn btn-neutral" title="Introduction to read counting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -253,7 +377,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../visu_map/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../intro_counting/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../count/" style="color: #fcfcfc">Next &raquo;</a></span>
