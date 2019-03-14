@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Visu map - Galaxy Spring day 2019</title>
+  <title>Visualisation of read mapping - Galaxy Spring day 2019</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Visu map";
+    var mkdocs_page_name = "Visualisation of read mapping";
     var mkdocs_page_input_path = "visu_map.md";
     var mkdocs_page_url = null;
   </script>
@@ -134,13 +134,23 @@
                     
     <a class="" href="../bam/">BAM inspection</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../map_visu.md">Visualisation of read mapping</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../visualisation/">Inspection of the mapping results</a>
+    <a class="current" href="./">Visualisation of read mapping</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#inspection-of-the-mapping-results">Inspection of the mapping results</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#ucsc-genome-browser">UCSC genome browser</a></li>
+        
+            <li><a class="toctree-l4" href="#igv">IGV</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -149,6 +159,10 @@
 		
     <span class="caption-text">Analysis of the differential gene expression</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../strandness/">Estimation of the strandness</a>
+                </li>
                 <li class="">
                     
     <a class="" href="../count/">Count the number of reads per annotated gene</a>
@@ -189,8 +203,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Mapping &raquo;</li>
+        
+      
     
-    <li>Visu map</li>
+    <li>Visualisation of read mapping</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -200,11 +218,29 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="inspection-of-the-mapping-results">Inspection of the mapping results</h1>
+<hr />
+<h2 id="ucsc-genome-browser">UCSC genome browser  <img alt="" src="../images/oeil.png" /></h2>
+<p>click the ucsc main link as indicated by the red arrow</p>
+<p><img alt="" src="../images/ucsc.png" /></p>
+<p>Zoom to chr4:540,000-560,000 (Chromosome 4 between 540 kb to 560 kb)</p>
+<h2 id="igv">IGV  <img alt="" src="../images/oeil.png" /></h2>
+<p>Zoom to chr4:540,000-560,000 (Chromosome 4 between 540 kb to 560 kb)</p>
+<hr />
+<p><img alt="" src="../images/gene_counting.png" /></p>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../strandness/" class="btn btn-neutral float-right" title="Estimation of the strandness">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../bam/" class="btn btn-neutral" title="BAM inspection"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -228,6 +264,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../bam/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../strandness/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
