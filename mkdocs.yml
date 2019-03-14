@@ -19,9 +19,9 @@ nav:
     - RNA STAR: star.md
     - HiSAT2: hisat2.md
     - BAM inspection: bam.md
-    - Visualisation of read mapping: map_visu.md
-    - Inspection of the mapping results: visualisation.md
+    - Visualisation of read mapping: visu_map.md
   - Analysis of the differential gene expression:
+    - Estimation of the strandness: strandness.md
     - Count the number of reads per annotated gene: count.md
     - Identification of the differentially expressed features: DE.md
     - Visualization of the differentially expressed genes: DEvisu.md
