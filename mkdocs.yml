@@ -24,7 +24,11 @@ nav:
     - Introduction to read counting: intro_counting.md
     - Estimation of the strandness: strandness.md
     - Count the number of reads per annotated gene: count.md
-    - Identification of the differentially expressed features: DE.md
-    - Visualization of the differentially expressed genes: DEvisu.md
-    - Analysis of functional enrichment among the differentially expressed genes: GO.md
+    - Identification of the differentially expressed features - DESeq2: DE_intro.md
+    - DESeq2 use: DEDESeq2.md
+    - Visualization of the differentially expressed genes: DEseq2visu.md
+    - Analysis of functional enrichment among the differentially expressed genes:
+      - Introduction: GO-intro.md
+      - GO: GO-tool.md
+  - Conclusion: conclusion.md
 theme: readthedocs
