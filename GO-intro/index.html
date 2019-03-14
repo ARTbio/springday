@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Identification of the differentially expressed features - Galaxy Spring day 2019</title>
+  <title>Introduction - Galaxy Spring day 2019</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Identification of the differentially expressed features";
-    var mkdocs_page_input_path = "DE.md";
+    var mkdocs_page_name = "Introduction";
+    var mkdocs_page_input_path = "GO-intro.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -157,31 +157,44 @@
                     
     <a class="" href="../count/">Count the number of reads per annotated gene</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../DE_intro/">Identification of the differentially expressed features - DESeq2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../DEDESeq2/">DESeq2 use</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../DEseq2visu/">Visualization of the differentially expressed genes</a>
+                </li>
                 <li class=" current">
                     
-    <a class="current" href="./">Identification of the differentially expressed features</a>
+    <span class="caption-text">Analysis of functional enrichment among the differentially expressed genes</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Introduction</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#analysis-of-the-differential-gene-expression">Analysis of the differential gene expression</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#count-the-number-of-reads-per-annotated-gene">Count the number of reads per annotated gene</a></li>
-        
-        </ul>
+    <li class="toctree-l4"><a href="#analysis-of-functional-enrichment-among-the-differentially-expressed-genes">Analysis of functional enrichment among the differentially expressed genes</a></li>
     
 
     </ul>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
-    <a class="" href="../DEvisu/">Visualization of the differentially expressed genes</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../GO/">Analysis of functional enrichment among the differentially expressed genes</a>
+    <a class="" href="../GO-tool/">GO</a>
                 </li>
     </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../conclusion/">Conclusion</a>
 	    </li>
           
         </ul>
@@ -206,11 +219,15 @@
     
       
         
+          <li>Analysis of functional enrichment among the differentially expressed genes &raquo;</li>
+        
+      
+        
           <li>Analysis of the differential gene expression &raquo;</li>
         
       
     
-    <li>Identification of the differentially expressed features</li>
+    <li>Introduction</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -220,15 +237,18 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="analysis-of-the-differential-gene-expression">Analysis of the differential gene expression</h1>
-<p>We will first investigate the differential gene expression to identify which genes are impacted by the Pasilla gene depletion.</p>
-<h3 id="count-the-number-of-reads-per-annotated-gene">Count the number of reads per annotated gene</h3>
-<p>To compare the expression of single genes between different conditions (e.g. with or without PS depletion),
-an essential first step is to quantify the number of reads per gene.</p>
-<p>Counting the number of reads per annotated gene
-Figure 16: Counting the number of reads per annotated gene
-In the previous image,</p>
-<p>How many reads are found for the different exons?</p>
+                <p><img alt="" src="../images/lamp.png" /></p>
+<h1 id="analysis-of-functional-enrichment-among-the-differentially-expressed-genes">Analysis of functional enrichment among the differentially expressed genes</h1>
+<p>We have extracted genes that are differentially expressed in treated (Pasilla gene-depleted)
+samples compared to untreated samples. We would like to know if there are categories of
+genes that are enriched among the differentially expressed genes.</p>
+<p>Gene Ontology (GO) analysis is widely used to reduce complexity and highlight biological
+processes in genome-wide expression studies.</p>
+<p>However, standard methods give biased results on RNA-seq data due to over-detection
+of differential expression for long and highly-expressed transcripts.</p>
+<p>The goseq tool provides methods for performing GO analysis of RNA-seq data,
+taking length bias into account. The methods and software used by goseq are equally
+applicable to other category based tests of RNA-seq data, such as KEGG pathway analysis.</p>
               
             </div>
           </div>
@@ -236,10 +256,10 @@ In the previous image,</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../DEvisu/" class="btn btn-neutral float-right" title="Visualization of the differentially expressed genes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../GO-tool/" class="btn btn-neutral float-right" title="GO">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../count/" class="btn btn-neutral" title="Count the number of reads per annotated gene"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../DEseq2visu/" class="btn btn-neutral" title="Visualization of the differentially expressed genes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -265,10 +285,10 @@ In the previous image,</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../count/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../DEseq2visu/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../DEvisu/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../GO-tool/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

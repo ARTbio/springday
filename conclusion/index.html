@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Quality control - Galaxy Spring day 2019</title>
+  <title>Conclusion - Galaxy Spring day 2019</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Quality control";
-    var mkdocs_page_input_path = "QC.md";
+    var mkdocs_page_name = "Conclusion";
+    var mkdocs_page_input_path = "conclusion.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -61,23 +61,9 @@
                     
     <a class="" href="../uploads/">Data upload</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Quality control</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#quality-control">Quality Control</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#fastqc-tool-to-analyse-the-fastq-or-fastqgz-datasets">FastQC tool to analyse the fastq (or fastq.gz) datasets</a></li>
-        
-            <li><a class="toctree-l4" href="#multiqc-to-aggregate-and-have-a-general-view-of-sequence-qualities-in-the-project">MultiQC to aggregate and have a general view of sequence qualities in the project</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../QC/">Quality control</a>
                 </li>
     </ul>
 	    </li>
@@ -200,9 +186,15 @@
     </ul>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../conclusion/">Conclusion</a>
+    <a class="current" href="./">Conclusion</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#conclusions">Conclusions</a></li>
+    
+
+    </ul>
 	    </li>
           
         </ul>
@@ -226,12 +218,8 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
-        
-          <li>Pretreatments &raquo;</li>
-        
-      
     
-    <li>Quality control</li>
+    <li>Conclusion</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -241,69 +229,10 @@
           <div role="main">
             <div class="section">
               
-                <p><img alt="" src="../images/galaxylogo.png" /></p>
-<h1 id="quality-control">Quality Control</h1>
-<h2 id="fastqc-tool-to-analyse-the-fastq-or-fastqgz-datasets">FastQC tool to analyse the fastq (or fastq.gz) datasets</h2>
-<hr />
-<p><img alt="" src="../images/tool_small.png" /></p>
-<ol>
-<li>
-<p>create a new history and name it <code>Quality Control</code></p>
-</li>
-<li>
-<p>Copy again all fastq.gz files from the data library into this history. You should
-  have 11 datasets in your history</p>
-</li>
-<li>
-<p>Select the <code>fastqc</code> tool.</p>
-</li>
-<li>
-<p>In the <code>Short read data from your current history</code> menu, select the <code>multiple datasets</code> button.</p>
-</li>
-<li>
-<p>Shift-Click to select all 11 datasets</p>
-</li>
-<li>
-<p>Click <code>Execute</code></p>
-</li>
-</ol>
-<hr />
-<p><img alt="" src="../images/oeil.png" /></p>
+                <h1 id="conclusions">Conclusions</h1>
 <ul>
-<li>Look at the results of <code>FastQC</code>: These are the datasets named <code>FastQC on data xx: Webpage</code></li>
+<li>worflows ?</li>
 </ul>
-<hr />
-<h2 id="multiqc-to-aggregate-and-have-a-general-view-of-sequence-qualities-in-the-project">MultiQC to aggregate and have a general view of sequence qualities in the project</h2>
-<hr />
-<p><img alt="" src="../images/tool_small.png" /></p>
-<ol>
-<li>
-<p>Select the <code>MultiQC</code>tool (you can use the search bar).</p>
-</li>
-<li>
-<p><code>Which tool was used generate logs?</code> : Select <code>FastQC</code></p>
-</li>
-<li>
-<p><code>Type of FastQC output?</code> : Select <code>Raw data</code></p>
-</li>
-<li>
-<p><code>FastQC output</code> Cmd-Click (discontinuous, multiple selection) the <em>11</em> files named
-  <code>FastQC on xx: RawData</code></p>
-</li>
-<li>
-<p>Click <code>Execute</code></p>
-</li>
-</ol>
-<hr />
-<p><img alt="" src="../images/oeil.png" /></p>
-<p>Look at the result of <code>MultiQC</code>, dataset named <code>MultiQC on ...: Webpage</code></p>
-<ul>
-<li>Pay attention to the General Statistics that indicate the read sizes.</li>
-<li>Pay attention to the <code>Sequence Quality Histograms</code>. What can you say about the
-  quality of the samples ?</li>
-<li>Have a look to the <code>Adapter Content</code> section.</li>
-</ul>
-<hr />
               
             </div>
           </div>
@@ -311,10 +240,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cDNAs/" class="btn btn-neutral float-right" title="RNAseq librairies - cDNA synthesis">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../uploads/" class="btn btn-neutral" title="Data upload"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../GO-tool/" class="btn btn-neutral" title="GO"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -340,10 +267,8 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../uploads/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../GO-tool/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../cDNAs/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

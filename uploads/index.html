@@ -173,17 +173,36 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../DE/">Identification of the differentially expressed features</a>
+    <a class="" href="../DE_intro/">Identification of the differentially expressed features - DESeq2</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../DEvisu/">Visualization of the differentially expressed genes</a>
+    <a class="" href="../DEDESeq2/">DESeq2 use</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../GO/">Analysis of functional enrichment among the differentially expressed genes</a>
+    <a class="" href="../DEseq2visu/">Visualization of the differentially expressed genes</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Analysis of functional enrichment among the differentially expressed genes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../GO-intro/">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../GO-tool/">GO</a>
                 </li>
     </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../conclusion/">Conclusion</a>
 	    </li>
           
         </ul>
@@ -242,15 +261,44 @@ while the remaining samples are from a single-end sequencing experiment. Thus th
 table will be (very) useful in our analysis since each of the 7 datasets are designated
 with (i) its original ID in GEO (or EBI SRA) (ii)  its condition (untreated or treated)
 and (iii) the sequencing technology used (single read or paired-end).</p>
-<ul>
-<li>GSM461176_untreat_single &lt;-&gt; SRR031709_untreat_single</li>
-<li>GSM461177_untreat_paired &lt;-&gt; SRR031714_untreat_paired</li>
-<li>GSM461178_untreat_paired &lt;-&gt; SRR031716_untreat_paired</li>
-<li>GSM461179_treat_single &lt;-&gt; SRR031718_treat_single</li>
-<li>GSM461180_treat_paired &lt;-&gt; SRR031724_treat_paired</li>
-<li>GSM461181_treat_paired &lt;-&gt; SRR031726_treat_paired</li>
-<li>GSM461182_untreat_single &lt;-&gt; SRR031728_untreat_single</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>id. in GEO</th>
+<th>id. in EBI SRA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GSM461176_untreat_single</td>
+<td>SRR031709_untreat_single</td>
+</tr>
+<tr>
+<td>GSM461177_untreat_paired</td>
+<td>SRR031714_untreat_paired</td>
+</tr>
+<tr>
+<td>GSM461178_untreat_paired</td>
+<td>SRR031716_untreat_paired</td>
+</tr>
+<tr>
+<td>GSM461179_treat_single</td>
+<td>SRR031718_treat_single</td>
+</tr>
+<tr>
+<td>GSM461180_treat_paired</td>
+<td>SRR031724_treat_paired</td>
+</tr>
+<tr>
+<td>GSM461181_treat_paired</td>
+<td>SRR031726_treat_paired</td>
+</tr>
+<tr>
+<td>GSM461182_untreat_single</td>
+<td>SRR031728_untreat_single</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <p><img alt="" src="../images/galaxylogo.png" /></p>
 <h2 id="data-upload">Data upload</h2>
