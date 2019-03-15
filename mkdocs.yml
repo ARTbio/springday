@@ -31,5 +31,7 @@ nav:
     - Analysis of functional enrichment among the differentially expressed genes:
       - Introduction: GO-intro.md
       - GO: GO-tool.md
-  - Conclusion: conclusion.md
+  - Galaxy Workflows:
+    - Introduction: workflow_intro.md
+    - Example: worflow_use.md
 theme: readthedocs
