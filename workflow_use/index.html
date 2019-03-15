@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Conclusion - Galaxy Spring day 2019</title>
+  <title>Galaxy Workflows - Galaxy Spring day 2019</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Conclusion";
-    var mkdocs_page_input_path = "conclusion.md";
+    var mkdocs_page_name = "Galaxy Workflows";
+    var mkdocs_page_input_path = "workflow_use.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -190,14 +190,18 @@
     </ul>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Conclusion</a>
+    <span class="caption-text">Galaxy Workflows</span>
     <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#conclusions">Conclusions</a></li>
-    
-
+                <li class="">
+                    
+    <a class="" href="../workflow_intro/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../worflow_use.md">Example</a>
+                </li>
     </ul>
 	    </li>
           
@@ -223,7 +227,7 @@
     
       
     
-    <li>Conclusion</li>
+    <li>Galaxy Workflows</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -233,21 +237,34 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="conclusions">Conclusions</h1>
+                <h1 id="galaxy-workflows">Galaxy Workflows</h1>
+<p>At this point, you should be more familiar with</p>
 <ul>
-<li>worflows ?</li>
+<li>importing and manipulating datasets in Galaxy</li>
+<li>using tools in single consecutive steps</li>
+<li>visualising the metadata associated to these steps as well as the results.</li>
 </ul>
+<p>However, this is only the tip of the Galaxy.</p>
+<p>Indeed, as you may have noticed, histories can become very complicated with a lot of
+datasets whose origin and purpose is not so easy to remember after a while (shorter that
+you may believe).</p>
+<p>Actually, the best way to preserve an analysis is to get it completely scripted in a
+computational workflow.</p>
+<p>This is where you find the Galaxy workflows !</p>
+<p>Galaxy workflow can be extracted from an history or built from scratch using the
+Galaxy workflow editor (Menu <code>worflows</code>).</p>
+<p>A workflow can be replayed at any time to regenerate an analysis. Importantly, they can be
+exported as a <code>.ga</code> file and imported in another Galaxy server. Provided that this new
+server has the input data and the tools specified by the workflow, the exact same analysis
+will be generated.</p>
+<p>Take home message: "advanced Galaxy users use workflows, to capture their work and make
+convincing, transparent and re-usable their computational protocols"</p>
+<p>In the next and last section, you will test 2 workflows that are available in your
+Galaxy server and recapitulate most of the analyses you have performed today.</p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../GO-tool/" class="btn btn-neutral" title="GO"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -270,8 +287,6 @@
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-      
-        <span><a href="../GO-tool/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>
