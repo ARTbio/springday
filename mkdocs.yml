@@ -26,6 +26,7 @@ nav:
     - Count the number of reads per annotated gene: count.md
     - Identification of the differentially expressed features - DESeq2: DE_intro.md
     - DESeq2 use: DEDESeq2.md
+    - Volcano Plot: volcano.md
     - Visualization of the differentially expressed genes: DEseq2visu.md
     - Analysis of functional enrichment among the differentially expressed genes:
       - Introduction: GO-intro.md
