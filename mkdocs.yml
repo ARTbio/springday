@@ -33,5 +33,5 @@ nav:
       - GO: GO-tool.md
   - Galaxy Workflows:
     - Introduction: workflow_intro.md
-    - Example: worflow_use.md
+    - Example: workflow_use.md
 theme: readthedocs
