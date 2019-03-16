@@ -34,4 +34,6 @@ nav:
   - Galaxy Workflows:
     - Introduction: workflow_intro.md
     - Example: workflow_use.md
+site_url: https://artbio.github.io/springday/
+repo_url: https://github.com/ARTbio/springday
 theme: readthedocs
