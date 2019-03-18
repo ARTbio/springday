@@ -48,19 +48,19 @@ and if so, how reads are stranded.
 ----
 ![](images/lamp.png)
 
-Infer Experiment tool tool generates one file with information on:
+Infer Experiment tool generates one file with information on:
 
 - Paired-end or single-end library
 - Fraction of reads failed to determine
 - 2 lines:
-  - For single-end
-    - Fraction of reads explained by “++,–” (SF in previous figure)
-    - Fraction of reads explained by “+-,-+” (SR in previous figure)
-  - For paired-end
-    - Fraction of reads explained by “1++,1–,2+-,2-+” (SF in previous figure)
-    - Fraction of reads explained by “1+-,1-+,2++,2–” (SR in previous figure)
+    - For single-end
+        - Fraction of reads explained by “++,–” (SF in previous figure)
+        - Fraction of reads explained by “+-,-+” (SR in previous figure)
+    - For paired-end
+        - Fraction of reads explained by “1++,1–,2+-,2-+” (SF in previous figure)
+        - Fraction of reads explained by “1+-,1-+,2++,2–” (SR in previous figure)
     
-If the two “Fraction of reads explained by” numbers are close to each other,
+If the two “Fraction of reads explained by” numbers are close to each other (*i.e.* a mix of SF and SR),
 we conclude that the library is not a strand-specific dataset (U in previous figure).
 
 As it is sometimes quite difficult to find out which settings correspond to those of
