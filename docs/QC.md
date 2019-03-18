@@ -14,7 +14,7 @@
   
   3. Select the `fastqc` tool.
   
-  4. In the `Short read data from your current history` menu, select the `multiple datasets` button.
+  4. In the `Short read data from your current history` menu, select the `multiple datasets` button. ![](images/multiple-datasets.png)
   
   5. Shift-Click to select all 11 datasets
   
