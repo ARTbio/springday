@@ -14,11 +14,11 @@
 5. Select the multiple datasets button for this menu
 6. Cmd-Click for discontinuous multiple selection of `single` fastq.gz files (3 datasets)
 7. `Filter Options`
-  - `Minimum length`: 20
+    - `Minimum length`: 20
 8. `Read Modification Options`
-  - `Quality cutoff`: 20
+    - `Quality cutoff`: 20
 9. `Output Options`
-  - `Report`: Yes
+    - `Report`: Yes
 10. Do not change the other available parameters and click `Execute`
 ----
 
