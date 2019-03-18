@@ -303,11 +303,11 @@ and if so, how reads are stranded.</p>
 </ol>
 <hr />
 <p><img alt="" src="../images/lamp.png" /></p>
-<p>Infer Experiment tool tool generates one file with information on:</p>
+<p>Infer Experiment tool generates one file with information on:</p>
 <ul>
 <li>Paired-end or single-end library</li>
 <li>Fraction of reads failed to determine</li>
-<li>2 lines:</li>
+<li>2 lines:<ul>
 <li>For single-end<ul>
 <li>Fraction of reads explained by “++,–” (SF in previous figure)</li>
 <li>Fraction of reads explained by “+-,-+” (SR in previous figure)</li>
@@ -319,7 +319,9 @@ and if so, how reads are stranded.</p>
 </ul>
 </li>
 </ul>
-<p>If the two “Fraction of reads explained by” numbers are close to each other,
+</li>
+</ul>
+<p>If the two “Fraction of reads explained by” numbers are close to each other (<em>i.e.</em> a mix of SF and SR),
 we conclude that the library is not a strand-specific dataset (U in previous figure).</p>
 <p>As it is sometimes quite difficult to find out which settings correspond to those of
 other programs, the following table might be helpful to identify the library type:</p>
