@@ -3,6 +3,7 @@
 ![](images/sequencing_strategies.png)
 
 You can retrieve three different informations :
+
 1. The relative orientation of reads :
     - `I` : Inwards
     - `M` : Matching
