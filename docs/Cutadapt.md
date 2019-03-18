@@ -53,7 +53,7 @@ you used the re-run button).
 4. Press `Execute`
 5. Now, the borring but essential job: Rename carefully the `Output` datasets generated
 by Cutadapt. To do so, help yourself with the `Info` button at the bottom of dataset green
-boxes.
+boxes. ![](images/info.png)
     
     Example: Rename `Cutadapt on data 10 and data 9: Read 2 Output` in `GSM461181_2_treat_paired.fastq.gz`
     
