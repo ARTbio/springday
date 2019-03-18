@@ -11,7 +11,7 @@
       1. `Source for the reference genome`: Use a builtin genome
       2. `Select a reference genome` : **dm6**
       3. `Is this a single or paired library:` Single-End
-      4. `FASTA/Q file:
+      4. `FASTA/Q file` :
           - `GSM461176_untreat_single.fastq.gz`
           - `GSM461179_treat_single.fastq.gz`
           - `GSM461182_untreat_single.fastq.gz`
