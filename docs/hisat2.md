@@ -6,7 +6,7 @@
 ![](images/tool_small.png)
 
   1. create a new history and name it `HISAT2`
-  2. Import the 11 datasets from the RNAseq data library to this `RNA STAR` history, plus the Drosophila_melanogaster.BDGP6.95.gtf file
+  2. Import the 11 datasets from the RNAseq data library to this `HISAT2` history, plus the Drosophila_melanogaster.BDGP6.95.gtf file
   3. Select the `HISAT2` tool with the following parameters to map your reads on the reference genome:
       1. `Source for the reference genome`: Use a builtin genome
       2. `Select a reference genome` : **dm6**
