@@ -7,8 +7,8 @@
 ## Cutadapt with single reads ![](images/tool_small.png)
 
 ----
-1. Create a new history `Cutapdapt`
-2. Copy the fastq files from the RNAseq data library to this new history
+1. Create a new history `Cutapdapt` (`wheel` --> `Create New`) ![](images/wheel.png)
+2. Copy the fastq files from the RNAseq data library to this new history (`wheel` --> `Copy datasets`)
 3. Select the `Cutadapt` tool
 4. Start with selecting `Single-end` in the `Single-end or Paired-end reads?` menu
 5. Select the multiple datasets button for this menu
