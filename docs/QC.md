@@ -7,7 +7,7 @@
 ----
 ![](images/tool_small.png)
 
-  1. create a new history and name it `Quality Control`
+  1. Create a new history and name it `Quality Control`
   
   2. Copy again all fastq.gz files from the data library into this history. You should
   have 11 datasets in your history
