@@ -44,6 +44,18 @@ and if so, how reads are stranded.
     3. `Number of reads sampled from SAM/BAM file (default = 200000)`: 200000
 3. `Execute`
 
+----
+![](images/tool_small.png)
+
+###  Summarize results with `MultiQC` tool
+
+1. Select the tool `MultiQC`
+2. Which tool was used generate logs?
+    - `RSeQC`
+3.  RSeQC output (Type of RSeQC output?)
+    - infer_experiment
+4. Select the 7 datasets of type `Infer Experiment on ...`
+3. `Execute`
 
 ----
 ![](images/lamp.png)
