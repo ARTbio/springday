@@ -92,6 +92,7 @@ read fastq file).
 
 We are going to download the fastq.gz files directly from
 the EBI SRA using the tool `EBI SRA ENA SRA` in the `Get data` tool submenu.
+
 ----
  ![](images/tool_small.png)
 ----
