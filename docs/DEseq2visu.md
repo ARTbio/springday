@@ -1,6 +1,6 @@
 ![](images/galaxylogo.png)
 
-# Visualisation of differential expressions
+# Visualisation of differential expression
 
 Now we would like to extract the most differentially expressed genes due to the treatment,
 and then visualize them using an heatmap of the normalized counts and also
