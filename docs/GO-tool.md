@@ -55,8 +55,9 @@ We have now the two required input files for goseq.
     
 goseq generates a big table with the following columns for each GO term:
 
-|Column                       | GO category                                                                                           |
+|Column                       | Description                                                                                           |
 |-----------------------------|-------------------------------------------------------------------------------------------------------|
+|category                     | GO category                                                                                           |
 |over_rep_pval                |p-value for over representation of the term in the differentially expressed genes                      |
 |under_rep_pval               |p-value for under representation of the term in the differentially expressed genes                     |
 |numDEInCat                   |number of differentially expressed genes in this category                                              |
