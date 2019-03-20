@@ -89,7 +89,7 @@ It's time to test the worflows !
   
   4. `1: treated data pairs`: Treat data pairs
   
-  5. `1:GTF`: Drosophila_melanogaster.BDGP6.95.gtf.gz
+  5. `2:GTF`: Drosophila_melanogaster.BDGP6.95.gtf.gz
     
   6. `3: un-treated data pairs`: Untreat data pairs
   
