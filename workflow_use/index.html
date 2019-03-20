@@ -203,7 +203,16 @@
     <a class="current" href="./">Example</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#galaxy-workflows">Galaxy Workflows</a></li>
+    <li class="toctree-l3"><a href="#workflow-upload">Workflow upload</a></li>
+    
+
+    <li class="toctree-l3"><a href="#running-workflows">Running workflows</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#prepare-inputs">Prepare inputs</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -250,30 +259,123 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="galaxy-workflows">Galaxy Workflows</h1>
-<p>At this point, you should be more familiar with</p>
+                <h1 id="workflow-upload">Workflow upload</h1>
+<p>Same as data libraries, you can import workflows, from shared data that has been pre-set in your Galaxy server for this training session.</p>
+<p>To access these workflows :</p>
+<hr />
+<p><img alt="" src="../images/tool_small.png" /></p>
+<ol>
+<li>
+<p>Click the menu <code>Données partagées</code> (<code>Shared data</code>) and select the submenu
+  <code>Workflows</code>. You should see two workflows : <code>paired-data-STAR-RNAseq</code> and <code>paired-data-HISAT2-RNAseq</code></p>
+</li>
+<li>
+<p>For each workflow, click on the arrow and select <code>Import</code>.</p>
+</li>
+</ol>
+<p>Now, you'll be able to see these workflows in the <code>Workflow</code> menu.</p>
+<hr />
+<h1 id="running-workflows">Running workflows</h1>
+<p>You need to return to our first galaxy history <code>Inputs</code>, to do so :</p>
+<hr />
+<p><img alt="" src="../images/tool_small.png" /></p>
+<ol>
+<li>
+<p>Click the menu <code>Utilisateur</code> and select the submenu
+  <code>Historiques sauvegardés</code>.</p>
+</li>
+<li>
+<p>Click on <code>Inputs</code>. Its status is now <strong>current history</strong>. </p>
+</li>
+</ol>
+<hr />
+<h2 id="prepare-inputs">Prepare inputs</h2>
+<p>These workflows use data collection as inputs, one per condition <code>treat</code> and <code>untreat</code>. Let's create our two data collections !</p>
+<hr />
+<p><img alt="" src="../images/tool_small.png" /></p>
+<ol>
+<li>
+<p>Click on the checked box. <img alt="" src="../images/checked-box.png" /></p>
+</li>
+<li>
+<p>Select all treated datasets in pair ends :</p>
 <ul>
-<li>importing and manipulating datasets in Galaxy</li>
-<li>using tools in single consecutive steps</li>
-<li>visualising the metadata associated to these steps as well as the results.</li>
+<li><code>GSM461180_1_treat_paired.fastq.gz</code></li>
+<li><code>GSM461181_1_treat_paired.fastq.gz</code></li>
+<li><code>GSM461180_2_treat_paired.fastq.gz</code></li>
+<li><code>GSM461181_2_treat_paired.fastq.gz</code></li>
 </ul>
-<p>However, this is only the tip of the Galaxy.</p>
-<p>Indeed, as you may have noticed, histories can become very complicated with a lot of
-datasets whose origin and purpose is not so easy to remember after a while (shorter that
-you may believe).</p>
-<p>Actually, the best way to preserve an analysis is to get it completely scripted in a
-computational workflow.</p>
-<p>This is where you find the Galaxy workflows !</p>
-<p>Galaxy workflow can be extracted from an history or built from scratch using the
-Galaxy workflow editor (Menu <code>worflows</code>).</p>
-<p>A workflow can be replayed at any time to regenerate an analysis. Importantly, they can be
-exported as a <code>.ga</code> file and imported in another Galaxy server. Provided that this new
-server has the input data and the tools specified by the workflow, the exact same analysis
-will be generated.</p>
-<p>Take home message: "advanced Galaxy users use workflows, to capture their work and make
-convincing, transparent and re-usable their computational protocols"</p>
-<p>In the next and last section, you will test 2 workflows that are available in your
-Galaxy server and recapitulate most of the analyses you have performed today.</p>
+</li>
+<li>
+<p>Then click on the button <code>Pour toute la sélection...</code> and <code>Build List of Dataset Pairs</code>.</p>
+</li>
+<li>
+<p>Enter a name for your dataset collection. <code>Name</code>: Treat data pairs. </p>
+</li>
+<li>
+<p><code>Create list</code></p>
+</li>
+</ol>
+<hr />
+<p><img alt="" src="../images/redo.png" /></p>
+<p>Redo a data collections for untreated datasets.</p>
+<ol>
+<li>
+<p>Unchecked the previous datasets.</p>
+</li>
+<li>
+<p>Select all untreated datasets in pair ends :</p>
+<ul>
+<li><code>GSM461177_1_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461178_1_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461177_2_untreat_paired.fastq.gz</code></li>
+<li><code>GSM461178_2_untreat_paired.fastq.gz</code></li>
+</ul>
+</li>
+<li>
+<p>Then click on the button <code>Pour toute la sélection...</code> and <code>Build List of Dataset Pairs</code>.</p>
+</li>
+<li>
+<p>Enter a name for your dataset collection. <code>Name</code>: Untreat data pairs. </p>
+</li>
+<li>
+<p><code>Create list</code></p>
+</li>
+</ol>
+<hr />
+<p>You are now the happy owner of two dataset paired collections ! </p>
+<p>It's time to test the worflows !</p>
+<hr />
+<p><img alt="" src="../images/tool_small.png" /></p>
+<ol>
+<li>
+<p>Go to Menu <code>Workflow</code>.</p>
+</li>
+<li>
+<p>For the workflow <code>imported: paired-data-HISAT2-RNAseq</code>, click on the arrow and then <code>Run</code>.</p>
+</li>
+<li>
+<p><code>History Options</code></p>
+<ul>
+<li><code>Send results to a new history</code>: Yes</li>
+</ul>
+</li>
+<li>
+<p><code>1: treated data pairs</code>: Treat data pairs</p>
+</li>
+<li>
+<p><code>1:GTF</code>: Drosophila_melanogaster.BDGP6.95.gtf.gz</p>
+</li>
+<li>
+<p><code>3: un-treated data pairs</code>: Untreat data pairs</p>
+</li>
+<li>
+<p><code>Run workflow</code></p>
+</li>
+</ol>
+<hr />
+<p><img alt="" src="../images/redo.png" /></p>
+<p>Redo the same for the workflow <code>imported: paired-data-STAR-RNAseq</code>.</p>
               
             </div>
           </div>
