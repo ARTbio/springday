@@ -1,33 +1,102 @@
-# Galaxy Workflows
+# Workflow upload
 
-At this point, you should be more familiar with
+Same as data libraries, you can import workflows, from shared data that has been pre-set in your Galaxy server for this training session.
 
-- importing and manipulating datasets in Galaxy
-- using tools in single consecutive steps
-- visualising the metadata associated to these steps as well as the results.
+To access these workflows :
+
+----
+  ![](images/tool_small.png)
+  
+  1. Click the menu `Données partagées` (`Shared data`) and select the submenu
+  `Workflows`. You should see two workflows : `paired-data-STAR-RNAseq` and `paired-data-HISAT2-RNAseq`
+  
+  2. For each workflow, click on the arrow and select `Import`.
 
 
-However, this is only the tip of the Galaxy.
+Now, you'll be able to see these workflows in the `Workflow` menu.
 
-Indeed, as you may have noticed, histories can become very complicated with a lot of
-datasets whose origin and purpose is not so easy to remember after a while (shorter that
-you may believe).
+----
 
-Actually, the best way to preserve an analysis is to get it completely scripted in a
-computational workflow.
+# Running workflows
 
-This is where you find the Galaxy workflows !
+You need to return to our first galaxy history `Inputs`, to do so :
 
-Galaxy workflow can be extracted from an history or built from scratch using the
-Galaxy workflow editor (Menu `worflows`).
+----
+  ![](images/tool_small.png)
+  
+  1. Click the menu `Utilisateur` and select the submenu
+  `Historiques sauvegardés`.
+  
+  2. Click on `Inputs`. Its status is now **current history**. 
 
-A workflow can be replayed at any time to regenerate an analysis. Importantly, they can be
-exported as a `.ga` file and imported in another Galaxy server. Provided that this new
-server has the input data and the tools specified by the workflow, the exact same analysis
-will be generated.
+----
 
-Take home message: "advanced Galaxy users use workflows, to capture their work and make
-convincing, transparent and re-usable their computational protocols"
+## Prepare inputs
 
-In the next and last section, you will test 2 workflows that are available in your
-Galaxy server and recapitulate most of the analyses you have performed today.
+These workflows use data collection as inputs, one per condition `treat` and `untreat`. Let's create our two data collections !
+
+----
+  ![](images/tool_small.png)
+  
+  1. Click on the checked box. ![](images/checked-box.png)
+  
+  2. Select all treated datasets in pair ends :
+      - `GSM461180_1_treat_paired.fastq.gz`
+      - `GSM461181_1_treat_paired.fastq.gz`
+      - `GSM461180_2_treat_paired.fastq.gz`
+      - `GSM461181_2_treat_paired.fastq.gz`
+  
+  3. Then click on the button `Pour toute la sélection...` and `Build List of Dataset Pairs`.
+  
+  4. Enter a name for your dataset collection. `Name`: Treat data pairs. 
+  
+  5. `Create list`
+
+----
+![](images/redo.png)
+
+  Redo a data collections for untreated datasets.
+  
+  1. Unchecked the previous datasets.
+  
+  2. Select all untreated datasets in pair ends :
+      - `GSM461177_1_untreat_paired.fastq.gz`
+      - `GSM461178_1_untreat_paired.fastq.gz`
+      - `GSM461177_2_untreat_paired.fastq.gz`
+      - `GSM461178_2_untreat_paired.fastq.gz`
+
+  3. Then click on the button `Pour toute la sélection...` and `Build List of Dataset Pairs`.
+  
+  4. Enter a name for your dataset collection. `Name`: Untreat data pairs. 
+  
+  5. `Create list`
+
+----
+
+You are now the happy owner of two dataset paired collections ! 
+
+It's time to test the worflows !
+
+----
+  ![](images/tool_small.png)
+  
+  1. Go to Menu `Workflow`.
+  
+  2. For the workflow `imported: paired-data-HISAT2-RNAseq`, click on the arrow and then `Run`.
+  
+  3. `History Options`
+      - `Send results to a new history`: Yes
+  
+  4. `1: treated data pairs`: Treat data pairs
+  
+  5. `1:GTF`: Drosophila_melanogaster.BDGP6.95.gtf.gz
+    
+  6. `3: un-treated data pairs`: Untreat data pairs
+  
+  7. `Run workflow`
+
+----
+
+![](images/redo.png)
+
+  Redo the same for the workflow `imported: paired-data-STAR-RNAseq`.
