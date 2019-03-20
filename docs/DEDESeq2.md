@@ -30,7 +30,7 @@
                   - In `2: Factor level`:
                       - `Specify a factor level`: Single
                       - `Counts file(s)`: the 3 gene count files with `single` in their name
-      3. `Files have header?`: No
+      3. `Files have header?`: Yes
       4. `Output normalized counts table`: Yes
       5. `Execute`
   
