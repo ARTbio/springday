@@ -6,7 +6,7 @@
 ![](images/tool_small.png)
 
   1. Select the `Volcano Plot create a volcano plot` tool with the following parameters:
-      - `Specify an input file`: the DESeq2 result fuke
+      - `Specify an input file`: the DESeq2 result file
       - `FDR (adjusted P value)`: Column: 7
       - `P value (raw)`: Column: 6
       - `Log Fold Change`: Column: 3

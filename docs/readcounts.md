@@ -10,7 +10,7 @@
 - HiSat2
 - STAR
 
-→ These aligners are “split aware”
+→ These aligners are “splice aware”
 
 → They generate a **BAM Alignment file**
 

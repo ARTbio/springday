@@ -5,9 +5,9 @@
 ----
 ![](images/tool_small.png)
 
-  1. Let's create a clean fresh history (`wheel` --> `Create New`) and name it DESeq2
+  1. Let's create a clean fresh history (`wheel` --> `Create New`) and name it DESeq2 ![](images/wheel.png)
   2. Copy the `.Counts`datasets from your `STAR`/ `HISAT2` history to this new history
-  (`wheel` --> 
+  (`wheel` --> `Copy datasets`)
   3. Select the `DESeq2` tool with the following parameters:
       1. `how`: Select group tags corresponding to levels
       2. In `Factor`:
@@ -30,7 +30,7 @@
                   - In `2: Factor level`:
                       - `Specify a factor level`: Single
                       - `Counts file(s)`: the 3 gene count files with `single` in their name
-      3. `Files have header?`: No
+      3. `Files have header?`: Yes
       4. `Output normalized counts table`: Yes
       5. `Execute`
   
